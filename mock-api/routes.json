@@ -1,0 +1,3 @@
+{
+    "/stores/:id": "/stores?id=:id"
+  }
