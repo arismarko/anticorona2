@@ -1,1 +1,1 @@
-{"version":3,"file":"static/css/styles.chunk.css","sources":["webpack:///./components/Item/Item.scss"],"sourcesContent":[".Speaker a {\n  font-weight: 800; }\n"],"mappings":"AAAA;AACA;;","sourceRoot":""}
+{"version":3,"file":"static/css/styles.chunk.css","sources":["webpack:///./src/components/Item/Item.scss"],"sourcesContent":[".Speaker a {\n  font-weight: 800; }\n"],"mappings":"AAAA;AACA;;","sourceRoot":""}

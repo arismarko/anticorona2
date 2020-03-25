@@ -1,409 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
-/***/ "./components/Item/Item.js":
-/*!*********************************!*\
-  !*** ./components/Item/Item.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Item_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Item.scss */ "./components/Item/Item.scss");
-/* harmony import */ var _Item_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Item_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/components/Item/Item.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-var Item = function Item(_ref) {
-  var speaker = _ref.speaker,
-      twitter = _ref.twitter;
-  return speaker ? __jsx("p", {
-    className: _Item_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Speaker,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, speaker, " / ", __jsx("a", {
-    href: "https://twitter.com/".concat(twitter),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, "@", twitter)) : null;
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Item);
-
-/***/ }),
-
-/***/ "./components/Layout/Footer.js":
-/*!*************************************!*\
-  !*** ./components/Layout/Footer.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/components/Layout/Footer.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 3
-    },
-    __self: this
-  }, "Footer");
-});
-
-/***/ }),
-
-/***/ "./components/Layout/Header.js":
-/*!*************************************!*\
-  !*** ./components/Layout/Header.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/components/Layout/Header.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var _ref$user = _ref.user,
-      user = _ref$user === void 0 ? {} : _ref$user;
-  return __jsx("header", {
-    className: "Header",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, __jsx("nav", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, "About us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/contact",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, "Contact us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/session",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, "Stores"))));
-});
-
-/***/ }),
-
-/***/ "./components/Layout/index.js":
-/*!************************************!*\
-  !*** ./components/Layout/index.js ***!
-  \************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./components/Layout/Header.js");
-/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./components/Layout/Footer.js");
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js");
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/components/Layout/index.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeStart = function (url) {
-  console.log("loading: ".concat(url));
-  nprogress__WEBPACK_IMPORTED_MODULE_4___default.a.start();
-};
-
-next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeStart = function () {
-  return nprogress__WEBPACK_IMPORTED_MODULE_4___default.a.done();
-};
-
-next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = function () {
-  return nprogress__WEBPACK_IMPORTED_MODULE_4___default.a.done();
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var children = _ref.children,
-      _ref$title = _ref.title,
-      title = _ref$title === void 0 ? 'Anticorona' : _ref$title;
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx("title", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, title), __jsx("meta", {
-    name: "viewport",
-    conent: "width=device-width",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }), __jsx("link", {
-    rel: "stylesheet",
-    href: "/static/nprogress.css",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }), __jsx("link", {
-    rel: "stylesheet",
-    href: "/static/styles.css",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  })), __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }), children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }));
-});
-
-/***/ }),
-
-/***/ "./components/Ratings/Rating.js":
-/*!**************************************!*\
-  !*** ./components/Ratings/Rating.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/from */ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/components/Ratings/Rating.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var selected = _ref.value,
-      _ref$name = _ref.name,
-      name = _ref$name === void 0 ? "rating" : _ref$name;
-  return __jsx("span", {
-    className: "Rating",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 3
-    },
-    __self: this
-  }, _babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default()({
-    length: 5
-  }).reduce(function (acc, curr, i) {
-    acc.push(__jsx("input", {
-      type: "radio",
-      name: name,
-      id: "".concat(name, "-").concat(i),
-      defaultChecked: 5 - selected === i,
-      key: "input-".concat(i),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 6
-      },
-      __self: this
-    }));
-    acc.push(__jsx("label", {
-      key: "label-".concat(i),
-      title: "".concat(5 - i, " star rating"),
-      htmlFor: "".concat(name, "-").concat(i),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    }, i));
-    return acc;
-  }, []));
-});
-
-/***/ }),
-
-/***/ "./components/Stores/Stores.js":
-/*!*************************************!*\
-  !*** ./components/Stores/Stores.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Ratings_Rating__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Ratings/Rating */ "./components/Ratings/Rating.js");
-/* harmony import */ var _Item_Item__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Item/Item */ "./components/Item/Item.js");
-
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/components/Stores/Stores.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var storeName = _ref.storeName,
-      location = _ref.location,
-      perioxi = _ref.perioxi,
-      id = _ref.id,
-      _ref$rating = _ref.rating,
-      rating = _ref$rating === void 0 ? false : _ref$rating,
-      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref, ["storeName", "location", "perioxi", "id", "rating"]);
-
-  return __jsx("div", {
-    className: "Store",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, __jsx("h2", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    as: "/stores/".concat(id, "?rating=4"),
-    href: "/stores?id=".concat(id, "&rating=4"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, storeName, " ")), "@ ", perioxi), __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, "Longitude: ", location[1], "Langitude:  ", location[0]), __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Foods"), "xx xx xx", rating && __jsx(_Ratings_Rating__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    value: rating,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }));
-});
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
@@ -831,39 +427,6 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
-/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
-
-function _extends() {
-  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
 }
 
 /***/ }),
@@ -5622,20 +5185,20 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fpages%2Findex.js!./":
-/*!*************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fpages%2Findex.js ***!
-  \*************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fsrc%2Fpages%2Findex.js!./":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fsrc%2Fpages%2Findex.js ***!
+  \*******************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+      var mod = __webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
+        module.hot.accept(/*! ./src/pages/index.js */ "./src/pages/index.js", function() {
           if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+          var updatedPage = __webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")
           next.router.update("/", updatedPage)
         })
       }
@@ -10248,10 +9811,414 @@ try {
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./src/components/Item/Item.js":
+/*!*************************************!*\
+  !*** ./src/components/Item/Item.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Item_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Item.scss */ "./src/components/Item/Item.scss");
+/* harmony import */ var _Item_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Item_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/src/components/Item/Item.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var Item = function Item(_ref) {
+  var speaker = _ref.speaker,
+      twitter = _ref.twitter;
+  return speaker ? __jsx("p", {
+    className: _Item_scss__WEBPACK_IMPORTED_MODULE_1___default.a.Speaker,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, speaker, " / ", __jsx("a", {
+    href: "https://twitter.com/".concat(twitter),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "@", twitter)) : null;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Item);
+
+/***/ }),
+
+/***/ "./src/components/Layout/Footer.js":
+/*!*****************************************!*\
+  !*** ./src/components/Layout/Footer.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/src/components/Layout/Footer.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, "Footer");
+});
+
+/***/ }),
+
+/***/ "./src/components/Layout/Header.js":
+/*!*****************************************!*\
+  !*** ./src/components/Layout/Header.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/src/components/Layout/Header.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var _ref$user = _ref.user,
+      user = _ref$user === void 0 ? {} : _ref$user;
+  return __jsx("header", {
+    className: "Header",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, __jsx("nav", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/about",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "About us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/contact",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "Contact us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/session",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "Stores"))));
+});
+
+/***/ }),
+
+/***/ "./src/components/Layout/index.js":
+/*!****************************************!*\
+  !*** ./src/components/Layout/index.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./src/components/Layout/Header.js");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./src/components/Layout/Footer.js");
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js");
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/src/components/Layout/index.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeStart = function (url) {
+  console.log("loading: ".concat(url));
+  nprogress__WEBPACK_IMPORTED_MODULE_4___default.a.start();
+};
+
+next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeStart = function () {
+  return nprogress__WEBPACK_IMPORTED_MODULE_4___default.a.done();
+};
+
+next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = function () {
+  return nprogress__WEBPACK_IMPORTED_MODULE_4___default.a.done();
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var children = _ref.children,
+      _ref$title = _ref.title,
+      title = _ref$title === void 0 ? 'Anticorona' : _ref$title;
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, __jsx("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, title), __jsx("meta", {
+    name: "viewport",
+    conent: "width=device-width",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }), __jsx("link", {
+    rel: "stylesheet",
+    href: "/static/nprogress.css",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }), __jsx("link", {
+    rel: "stylesheet",
+    href: "/static/styles.css",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  })), __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }), children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }));
+});
+
+/***/ }),
+
+/***/ "./src/components/Ratings/Rating.js":
+/*!******************************************!*\
+  !*** ./src/components/Ratings/Rating.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/from */ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/src/components/Ratings/Rating.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var selected = _ref.value,
+      _ref$name = _ref.name,
+      name = _ref$name === void 0 ? "rating" : _ref$name;
+  return __jsx("span", {
+    className: "Rating",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, _babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default()({
+    length: 5
+  }).reduce(function (acc, curr, i) {
+    acc.push(__jsx("input", {
+      type: "radio",
+      name: name,
+      id: "".concat(name, "-").concat(i),
+      defaultChecked: 5 - selected === i,
+      key: "input-".concat(i),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }));
+    acc.push(__jsx("label", {
+      key: "label-".concat(i),
+      title: "".concat(5 - i, " star rating"),
+      htmlFor: "".concat(name, "-").concat(i),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, i));
+    return acc;
+  }, []));
+});
+
+/***/ }),
+
+/***/ "./src/components/Stores/Stores.js":
+/*!*****************************************!*\
+  !*** ./src/components/Stores/Stores.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Ratings_Rating__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Ratings/Rating */ "./src/components/Ratings/Rating.js");
+/* harmony import */ var _Item_Item__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Item/Item */ "./src/components/Item/Item.js");
+
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/src/components/Stores/Stores.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var storeName = _ref.storeName,
+      location = _ref.location,
+      perioxi = _ref.perioxi,
+      id = _ref.id,
+      _ref$rating = _ref.rating,
+      rating = _ref$rating === void 0 ? false : _ref$rating,
+      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref, ["storeName", "location", "perioxi", "id", "rating"]);
+
+  return __jsx("div", {
+    className: "Store",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    as: "/stores/".concat(id, "?rating=4"),
+    href: "/stores?id=".concat(id, "&rating=4"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, storeName, " ")), "@ ", perioxi), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "Longitude: ", location[1], "Langitude:  ", location[0]), __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "Foods"), "xx xx xx", rating && __jsx(_Ratings_Rating__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    value: rating,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }));
+});
+
+/***/ }),
+
+/***/ "./src/pages/index.js":
+/*!****************************!*\
+  !*** ./src/pages/index.js ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10259,28 +10226,26 @@ try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout/index.js");
-/* harmony import */ var _components_Stores_Stores__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Stores/Stores */ "./components/Stores/Stores.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout/index.js");
+/* harmony import */ var _components_Stores_Stores__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Stores/Stores */ "./src/components/Stores/Stores.js");
 
 
 
 
 
 
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/src/pages/index.js";
 
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/pages/index.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
 
@@ -10289,19 +10254,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 var Index =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Index, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Index, _Component);
 
   function Index() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Index);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Index);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Index).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Index).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Index, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Index, [{
     key: "render",
     value: function render() {
       var stores = this.props.stores;
-      return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 17
@@ -10313,41 +10278,18 @@ function (_Component) {
           lineNumber: 18
         },
         __self: this
-      }, "Stores"), stores.map(function (s) {
-        return __jsx(_components_Stores_Stores__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-          key: s.id
-        }, s, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 19
-          },
-          __self: this
-        }));
-      }));
+      }, "Stores"));
     }
   }], [{
     key: "getInitialProps",
     value: function getInitialProps() {
-      var res, stores;
       return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function getInitialProps$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.next = 2;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_8___default()('http://localhost:3001/stores'));
+              return _context.abrupt("return", {});
 
-            case 2:
-              res = _context.sent;
-              _context.next = 5;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(res.json());
-
-            case 5:
-              stores = _context.sent;
-              return _context.abrupt("return", {
-                stores: stores
-              });
-
-            case 7:
+            case 1:
             case "end":
               return _context.stop();
           }
@@ -10357,20 +10299,20 @@ function (_Component) {
   }]);
 
   return Index;
-}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 1:
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fpages%2Findex.js ***!
-  \*****************************************************************************************************************************************************************************/
+/***/ 0:
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fsrc%2Fpages%2Findex.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fsrc%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fsrc%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -10386,5 +10328,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

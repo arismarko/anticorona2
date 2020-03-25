@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server/server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "mock-api": "json-server mock-api/db.json --port 3001  --routes mock-api/routes.json",
@@ -23,5 +23,10 @@
     "nprogress": "^0.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.31",
+    "@types/react": "^16.9.25",
+    "typescript": "^3.8.3"
   }
 }
