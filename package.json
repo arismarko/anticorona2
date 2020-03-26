@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server/server.js",
+    "dev": "node server/server.js && graphqlserver/index.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "mock-api": "json-server mock-api/db.json --port 3001  --routes mock-api/routes.json",
-    "dev-server": "PORT=3001 router ./routes/index.js"
+    "dev-server": "PORT=3001 router ./routes/index.js",
+    "dev2": "nodemon",
+    "build2": "next build && tsc --project tsconfig.json"
   },
   "keywords": [],
   "author": "",
@@ -16,17 +18,24 @@
   "dependencies": {
     "@remy/envy": "^4.0.2",
     "@zeit/next-sass": "^1.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "graphql-import": "^1.0.1",
+    "graphql-resolvers": "^0.4.2",
+    "graphql-yoga": "^1.18.3",
     "isomorphic-unfetch": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
     "next": "^9.1.7",
     "node-sass": "^4.13.1",
     "nprogress": "^0.2.0",
+    "prisma-client-lib": "^1.34.10",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.31",
     "@types/react": "^16.9.25",
+    "nodemon": "^2.0.2",
     "typescript": "^3.8.3"
   }
 }

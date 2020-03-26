@@ -1,7 +1,5 @@
-import { combineResolvers, skip } from 'graphql-resolvers';
 
-
-export default {
+module.exports =  {
     Query: {
         getStoreById:  async (parent, { id }, { prisma }) => {
             const store = await prisma.store({ id });
