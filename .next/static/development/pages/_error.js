@@ -10004,7 +10004,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!******************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Fanticorona%2Fanticorona%2Fsrc%2Fpages%2F_error.js ***!
   \******************************************************************************************************************************************************************************************/
@@ -10027,5 +10027,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map

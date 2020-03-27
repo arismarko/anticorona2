@@ -25,7 +25,7 @@ class GraphQLService {
             }),
         });
 
-        server.start({ port: process.env.PORT }, () => {
+        server.start({ port: 4400 }, () => {
             console.log('App running on http://localhost:4400');
         });
     }

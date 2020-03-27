@@ -1,27 +1,45 @@
-import { Component } from 'react';
-import fetch from 'isomorphic-unfetch';
 import Layout from '../components/Layout';
+import fetch from 'isomorphic-unfetch';
 import Stores from '../components/Stores/Stores';
+import { useQuery } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+import { withApollo } from '../lib/apollo'
 
-class Index extends Component {
-    static async getInitialProps() {
-        // const res = await fetch('http://localhost:3001/stores')
-        // const stores = await res.json();
+const ALL_STORES_QUERY = gql`
+  query getStoreByName($name: String!){
+    store
+  }
+`
 
-        return {};
-    }
-
-    render() {
-        const {stores} = this.props;
-        return (
-            <Layout>
-                <h1>Stores</h1>
-                {/* {stores.map(s=> <Stores key={s.id} {...s} />)}
-                 */}
-            </Layout>
-        )
-            
-        }
+export const allStoresQueryVars = {
+    name: 'tesco1'
 }
 
-export default Index;
+
+const Index = function (props)  {
+  const { loading, error, data, fetchMore, networkStatus } = useQuery(
+    ALL_STORES_QUERY,
+    {
+      variables: allStoresQueryVars,
+      // Setting this value to true will make the component rerender when
+      // the "networkStatus" changes, so we are able to know if it is fetching
+      // more data
+      notifyOnNetworkStatusChange: true,
+    }
+  )
+
+  return (
+    
+    <Layout>
+        <h1> Welcome to my workshop</h1>
+        <ul>
+            <li>
+                <a href="/about">About</a>
+                {data}
+            </li>
+        </ul>
+    </Layout>
+  )
+}
+
+export default withApollo()(Index)
