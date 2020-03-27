@@ -6,8 +6,8 @@ import gql from 'graphql-tag'
 import { withApollo } from '../lib/apollo'
 
 const ALL_STORES_QUERY = gql`
-  query getStoreByName($name: String!){
-    store
+  query getAllStores{
+    location
   }
 `
 
@@ -18,15 +18,10 @@ export const allStoresQueryVars = {
 
 const Index = function (props)  {
   const { loading, error, data, fetchMore, networkStatus } = useQuery(
-    ALL_STORES_QUERY,
-    {
-      variables: allStoresQueryVars,
-      // Setting this value to true will make the component rerender when
-      // the "networkStatus" changes, so we are able to know if it is fetching
-      // more data
-      notifyOnNetworkStatusChange: true,
-    }
+    ALL_STORES_QUERY
   )
+
+  console.log(data);
 
   return (
     

@@ -22,6 +22,7 @@ class GraphQLService {
             resolvers,
             context: async () => ({
                 prisma: db,
+                debug: true,
             }),
         });
 

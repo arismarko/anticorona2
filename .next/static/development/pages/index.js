@@ -22918,7 +22918,7 @@ var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query getStoreByName($name: String!){\n    store\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  query getAllStores{\n    location\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -22939,48 +22939,43 @@ var allStoresQueryVars = {
 };
 
 var Index = function Index(props) {
-  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_5__["useQuery"])(ALL_STORES_QUERY, {
-    variables: allStoresQueryVars,
-    // Setting this value to true will make the component rerender when
-    // the "networkStatus" changes, so we are able to know if it is fetching
-    // more data
-    notifyOnNetworkStatusChange: true
-  }),
+  var _useQuery = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_5__["useQuery"])(ALL_STORES_QUERY),
       loading = _useQuery.loading,
       error = _useQuery.error,
       data = _useQuery.data,
       fetchMore = _useQuery.fetchMore,
       networkStatus = _useQuery.networkStatus;
 
+  console.log(data);
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 28
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 29
     },
     __self: this
   }, " Welcome to my workshop"), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 30
     },
     __self: this
   }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 31
     },
     __self: this
   }, __jsx("a", {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 32
     },
     __self: this
   }, "About"), data)));

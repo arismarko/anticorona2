@@ -19,6 +19,7 @@ type Query {
     getItemsByName(name: String!): [Item!]
     getStoresByName(name: String!): [Store!]
     getStoresByItemName(name: String!): [Store!]
+    getAllStores: [Store!]
 }
 
 input AddItemInput {

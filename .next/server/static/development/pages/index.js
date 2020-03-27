@@ -3046,8 +3046,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const ALL_STORES_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_5___default.a`
-  query getStoreByName($name: String!){
-    store
+  query getAllStores{
+    location
   }
 `;
 const allStoresQueryVars = {
@@ -3061,42 +3061,37 @@ const Index = function (props) {
     data,
     fetchMore,
     networkStatus
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useQuery"])(ALL_STORES_QUERY, {
-    variables: allStoresQueryVars,
-    // Setting this value to true will make the component rerender when
-    // the "networkStatus" changes, so we are able to know if it is fetching
-    // more data
-    notifyOnNetworkStatusChange: true
-  });
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useQuery"])(ALL_STORES_QUERY);
+  console.log(data);
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 28
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 29
     },
     __self: this
   }, " Welcome to my workshop"), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 30
     },
     __self: this
   }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 31
     },
     __self: this
   }, __jsx("a", {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 32
     },
     __self: this
   }, "About"), data)));

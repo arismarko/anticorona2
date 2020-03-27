@@ -24,6 +24,10 @@ module.exports =  {
         getItemById: async (parent, { id }, { prisma }) => {
             const item = await prisma.item({ id });
             return item;
+        },
+        getAllStores: async (parent, args, { prisma }) => {
+            const stores = await prisma.stores();
+            return stores;
         }
     },
     Mutation: {
