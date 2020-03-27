@@ -1,7 +1,7 @@
 import { ApolloClient } from 'apollo-client'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { HttpLink } from 'apollo-link-http'
-import fetch from 'isomorphic-unfetch'
+import gql from 'graphql-tag'
 
 export default function createApolloClient(initialState, ctx) {
   // The `ctx` (NextPageContext) will only be present on the server.
@@ -9,10 +9,24 @@ export default function createApolloClient(initialState, ctx) {
   return new ApolloClient({
     ssrMode: Boolean(ctx),
     link: new HttpLink({
-      uri: 'http://localhost:4400/', // Server URL (must be absolute)
-      credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
-      fetch,
+      uri: 'http://localhost:4400',
     }),
-    cache: new InMemoryCache().restore(initialState),
-  })
+    typeDefs: gql`
+      extend type Store {
+        id: ID!
+        location: String!
+        date: String!
+        storename: String!
+        coordinates: String!
+        missings:[Item]
+      }
+
+      extend type Item {
+        id: ID! 
+        item: String,
+        number: String
+      }
+   `,
+    cache: new InMemoryCache()
+  });
 }

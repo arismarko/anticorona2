@@ -101,7 +101,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2326,8 +2326,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apollo-link-http */ "apollo-link-http");
 /* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_link_http__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -2338,13 +2338,25 @@ function createApolloClient(initialState, ctx) {
   return new apollo_client__WEBPACK_IMPORTED_MODULE_0__["ApolloClient"]({
     ssrMode: Boolean(ctx),
     link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_2__["HttpLink"]({
-      uri: 'http://localhost:4400/',
-      // Server URL (must be absolute)
-      credentials: 'same-origin',
-      // Additional fetch() options like `credentials` or `headers`
-      fetch: (isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default())
+      uri: 'http://localhost:4400'
     }),
-    cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]().restore(initialState)
+    typeDefs: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a`
+      extend type Store {
+        id: ID!
+        location: String!
+        date: String!
+        storename: String!
+        coordinates: String!
+        missings:[Item]
+      }
+
+      extend type Item {
+        id: ID! 
+        item: String,
+        number: String
+      }
+   `,
+    cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]()
   });
 }
 
@@ -3101,7 +3113,7 @@ const Index = function (props) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
