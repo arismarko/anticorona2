@@ -1,6 +1,5 @@
 const express = require('express');
 const next = require('next');
-const GraphQLService = require('./graphqlserver');
 
 const dev = process.env.NODE_ENV !== 'production';
 
@@ -14,10 +13,6 @@ app
   .prepare()
   .then(() => {
     const server = express();
-
-    const graphqlserver = new GraphQLService();
-    graphqlserver.init();
-
     server.use(require('./routes'));
 
     server.get('/stores/:id', (req, res) => {

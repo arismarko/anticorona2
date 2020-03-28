@@ -6,8 +6,10 @@ import gql from 'graphql-tag'
 import { withApollo } from '../lib/apollo'
 
 const ALL_STORES_QUERY = gql`
-  query getAllStores{
-    location
+  query {
+    getAllStores{
+      location
+    }
   }
 `
 
@@ -30,7 +32,7 @@ const Index = function (props)  {
         <ul>
             <li>
                 <a href="/about">About</a>
-                {data}
+                {}
             </li>
         </ul>
     </Layout>
