@@ -1,9 +1,9 @@
 import css from './Item.scss';
 
-const Item = ({ speaker, twitter }) =>
+const Item = ({ item, number }) =>
   speaker ? (
-    <p className={css.Speaker}>
-      {speaker} / <a href={`https://twitter.com/${twitter}`}>@{twitter}</a>
+    <p>
+      {item}: {number}
     </p>
 ) : null;
 

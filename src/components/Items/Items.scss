@@ -1,0 +1,25 @@
+.navigation {
+    nav {
+        background-color: #000;
+
+        ul, li {
+            float: left; 
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+        }
+
+        ul {
+            width: 100%;
+            background-color: #000;
+        }
+
+        li {
+            padding: 20px;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

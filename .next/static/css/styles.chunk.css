@@ -1,5 +1,20 @@
 .BjMZhsp49R6sdgL3xPAwP a {
   font-weight: 800; }
 
+._3hdMkcqFlEbdbQl_IXXnva nav {
+  background-color: #000; }
+  ._3hdMkcqFlEbdbQl_IXXnva nav ul, ._3hdMkcqFlEbdbQl_IXXnva nav li {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none; }
+  ._3hdMkcqFlEbdbQl_IXXnva nav ul {
+    width: 100%;
+    background-color: #000; }
+  ._3hdMkcqFlEbdbQl_IXXnva nav li {
+    padding: 20px; }
+    ._3hdMkcqFlEbdbQl_IXXnva nav li a {
+      color: #fff; }
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/
