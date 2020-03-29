@@ -39,6 +39,26 @@ module.exports =
 /******/ 		return module.exports;
 /******/ 	}
 /******/
+/******/ 	// This file contains only the entry chunk.
+/******/ 	// The chunk loading function for additional chunks
+/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
+/******/ 		var promises = [];
+/******/
+/******/
+/******/ 		// require() chunk loading for javascript
+/******/
+/******/ 		// "0" is the signal for "already loaded"
+/******/ 		if(installedChunks[chunkId] !== 0) {
+/******/ 			var chunk = require("../../../" + ({}[chunkId]||chunkId) + ".js");
+/******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
+/******/ 			for(var moduleId in moreModules) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 			for(var i = 0; i < chunkIds.length; i++)
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 		}
+/******/ 		return Promise.all(promises);
+/******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -2516,16 +2536,33 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Footer_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.scss */ "./src/components/Layout/Footer.scss");
+/* harmony import */ var _Footer_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Footer_scss__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Layout/Footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx("div", {
+  className: _Footer_scss__WEBPACK_IMPORTED_MODULE_1___default.a.footer,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 3
+    lineNumber: 4
   },
   __self: undefined
 }, "Footer"));
+
+/***/ }),
+
+/***/ "./src/components/Layout/Footer.scss":
+/*!*******************************************!*\
+  !*** ./src/components/Layout/Footer.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"footer": "_3BrbjHEyR4fmO75lq64X3p"
+};
 
 /***/ }),
 
@@ -2587,7 +2624,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 10
   },
   __self: undefined
-}, "About us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+}, "Add a store")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/contact",
   __source: {
     fileName: _jsxFileName,
@@ -2617,6 +2654,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
+/***/ "./src/components/Layout/Layout.scss":
+/*!*******************************************!*\
+  !*** ./src/components/Layout/Layout.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"mainbody": "_3A3beaUlXaEhC9wey5JB38"
+};
+
+/***/ }),
+
 /***/ "./src/components/Layout/index.js":
 /*!****************************************!*\
   !*** ./src/components/Layout/index.js ***!
@@ -2636,9 +2686,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Layout_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Layout.scss */ "./src/components/Layout/Layout.scss");
+/* harmony import */ var _Layout_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_Layout_scss__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Layout/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2660,19 +2713,19 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
 }) => __jsx("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16
+    lineNumber: 18
   },
   __self: undefined
 }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17
+    lineNumber: 19
   },
   __self: undefined
 }, __jsx("title", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18
+    lineNumber: 20
   },
   __self: undefined
 }, title), __jsx("meta", {
@@ -2680,7 +2733,7 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   conent: "width=device-width",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 21
   },
   __self: undefined
 }), __jsx("link", {
@@ -2688,7 +2741,7 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   href: "/static/nprogress.css",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 22
   },
   __self: undefined
 }), __jsx("link", {
@@ -2696,19 +2749,48 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   href: "/static/styles.css",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 23
+  },
+  __self: undefined
+}), __jsx("link", {
+  re: "stylesheet",
+  href: "/static/maps.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 24
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "stylesheet",
+  href: "https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 25
   },
   __self: undefined
 })), __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 27
   },
   __self: undefined
-}), children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}), __jsx("main", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25
+    lineNumber: 28
+  },
+  __self: undefined
+}, __jsx("div", {
+  id: "container",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 29
+  },
+  __self: undefined
+}, children)), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 33
   },
   __self: undefined
 })));
@@ -2783,19 +2865,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Ratings_Rating__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Ratings/Rating */ "./src/components/Ratings/Rating.js");
-/* harmony import */ var _Item_Item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Item/Item */ "./src/components/Item/Item.js");
-
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Ratings_Rating__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Ratings/Rating */ "./src/components/Ratings/Rating.js");
+/* harmony import */ var _Item_Item__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Item/Item */ "./src/components/Item/Item.js");
+/* harmony import */ var _Stores_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Stores.scss */ "./src/components/Stores/Stores.scss");
+/* harmony import */ var _Stores_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Stores_scss__WEBPACK_IMPORTED_MODULE_5__);
 
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Stores/Stores.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -2808,64 +2891,63 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
     id,
     rating = false
   } = _ref,
-      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["storename", "location", "coordinates", "missings", "id", "rating"]);
+      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref, ["storename", "location", "coordinates", "missings", "id", "rating"]);
 
   return __jsx("div", {
-    className: "Store",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }, __jsx("h2", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    as: `/stores/${id}?rating=4`,
-    href: `/stores?id=${id}&rating=4`,
+    className: _Stores_scss__WEBPACK_IMPORTED_MODULE_5___default.a.stores,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: undefined
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    as: `/stores/${id}?rating=4`,
+    href: `/stores?id=${id}&rating=4`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: undefined
   }, storename, " ")), "@ ", location), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: undefined
-  }, "Longitude: ", coordinates.split(',')[1], " \xA0 Langitude:  ", coordinates.split(',')[0]), __jsx("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  }, "Missing Items"), missings ? missings.map(item => __jsx(_Item_Item__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    key: item.id
-  }, item, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: undefined
-  }))) : "", rating && __jsx(_Ratings_Rating__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "Longitude: ", coordinates.split(',')[1], " \xA0 Langitude:  ", coordinates.split(',')[0]), rating && __jsx(_Ratings_Rating__WEBPACK_IMPORTED_MODULE_3__["default"], {
     value: rating,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: undefined
   }));
 });
+
+/***/ }),
+
+/***/ "./src/components/Stores/Stores.scss":
+/*!*******************************************!*\
+  !*** ./src/components/Stores/Stores.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"stores": "Bfl5KkRRndhUZkPpDXw2d"
+};
 
 /***/ }),
 
@@ -3150,6 +3232,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _lib_apollo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/apollo */ "./src/lib/apollo.js");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/dynamic */ "next/dynamic");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _styles_pages_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./styles/pages.scss */ "./src/pages/styles/pages.scss");
+/* harmony import */ var _styles_pages_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles_pages_scss__WEBPACK_IMPORTED_MODULE_10__);
 
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/pages/index.js";
 
@@ -3161,6 +3247,15 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
+
+const MapWithNoSSR = next_dynamic__WEBPACK_IMPORTED_MODULE_9___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../components/Map/Map */ "./src/components/Map/Map.js")), {
+  ssr: false,
+  loadableGenerated: {
+    webpack: () => [/*require.resolve*/(/*! ../components/Map/Map */ "./src/components/Map/Map.js")],
+    modules: ['../components/Map/Map']
+  }
+});
 const ALL_STORES_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_7___default.a`
   query {
     getAllStores{
@@ -3183,28 +3278,57 @@ const Index = function (props) {
     fetchMore,
     networkStatus
   } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_6__["useQuery"])(ALL_STORES_QUERY);
+  const datapoints = [{
+    "latitude": 51.514248,
+    "longitude": -0.093145
+  }, {
+    "latitude": 52.466667,
+    "longitude": -1.916667
+  }];
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 44
     },
     __self: this
   }, __jsx("h1", {
+    className: _styles_pages_scss__WEBPACK_IMPORTED_MODULE_10___default.a.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 45
     },
     __self: this
-  }, " Find my item"), __jsx(_components_Items_Items__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, " Find my item"), __jsx("header", {
+    className: _styles_pages_scss__WEBPACK_IMPORTED_MODULE_10___default.a.header,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 46
     },
     __self: this
-  }), __jsx("h2", {
+  }, __jsx(_components_Items_Items__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 47
+    },
+    __self: this
+  })), __jsx("div", {
+    className: `columns mapview ${_styles_pages_scss__WEBPACK_IMPORTED_MODULE_10___default.a.pages}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, __jsx("section", {
+    className: "column is-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
     },
     __self: this
   }, "Stores"), data ? data.getAllStores.map(s => __jsx(_components_Stores_Stores__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -3212,13 +3336,42 @@ const Index = function (props) {
   }, s, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 52
     },
     __self: this
-  }))) : "");
+  }))) : ""), __jsx("aside", {
+    className: "column",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  }, __jsx(MapWithNoSSR, {
+    points: datapoints,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_lib_apollo__WEBPACK_IMPORTED_MODULE_8__["withApollo"])()(Index));
+
+/***/ }),
+
+/***/ "./src/pages/styles/pages.scss":
+/*!*************************************!*\
+  !*** ./src/pages/styles/pages.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"pages": "_2H-1xXzOGI2kb03DeLbfzx",
+	"header": "_2S0lLhptLNYs6WaUQQXf_q",
+	"title": "_3rFENcq5tEGQS_0Bsmw-t"
+};
 
 /***/ }),
 
@@ -3465,6 +3618,17 @@ module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 
+/***/ "next/dynamic":
+/*!*******************************!*\
+  !*** external "next/dynamic" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/dynamic");
+
+/***/ }),
+
 /***/ "next/head":
 /*!****************************!*\
   !*** external "next/head" ***!
@@ -3531,6 +3695,17 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-dom");
+
+/***/ }),
+
 /***/ "react-is":
 /*!***************************!*\
   !*** external "react-is" ***!
@@ -3539,6 +3714,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "react-map-gl":
+/*!*******************************!*\
+  !*** external "react-map-gl" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-map-gl");
 
 /***/ }),
 

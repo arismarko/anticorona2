@@ -1,6 +1,7 @@
+import styles from './Footer.scss';
 
 export default () => (
- <div>
+ <div className={styles.footer}>
      Footer
  </div>
 )

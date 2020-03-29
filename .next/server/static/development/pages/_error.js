@@ -1925,16 +1925,33 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Footer_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.scss */ "./src/components/Layout/Footer.scss");
+/* harmony import */ var _Footer_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Footer_scss__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Layout/Footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx("div", {
+  className: _Footer_scss__WEBPACK_IMPORTED_MODULE_1___default.a.footer,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 3
+    lineNumber: 4
   },
   __self: undefined
 }, "Footer"));
+
+/***/ }),
+
+/***/ "./src/components/Layout/Footer.scss":
+/*!*******************************************!*\
+  !*** ./src/components/Layout/Footer.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"footer": "_3BrbjHEyR4fmO75lq64X3p"
+};
 
 /***/ }),
 
@@ -1996,7 +2013,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 10
   },
   __self: undefined
-}, "About us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+}, "Add a store")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/contact",
   __source: {
     fileName: _jsxFileName,
@@ -2026,6 +2043,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
+/***/ "./src/components/Layout/Layout.scss":
+/*!*******************************************!*\
+  !*** ./src/components/Layout/Layout.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"mainbody": "_3A3beaUlXaEhC9wey5JB38"
+};
+
+/***/ }),
+
 /***/ "./src/components/Layout/index.js":
 /*!****************************************!*\
   !*** ./src/components/Layout/index.js ***!
@@ -2045,9 +2075,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Layout_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Layout.scss */ "./src/components/Layout/Layout.scss");
+/* harmony import */ var _Layout_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_Layout_scss__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Layout/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2069,19 +2102,19 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
 }) => __jsx("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16
+    lineNumber: 18
   },
   __self: undefined
 }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17
+    lineNumber: 19
   },
   __self: undefined
 }, __jsx("title", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18
+    lineNumber: 20
   },
   __self: undefined
 }, title), __jsx("meta", {
@@ -2089,7 +2122,7 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   conent: "width=device-width",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 21
   },
   __self: undefined
 }), __jsx("link", {
@@ -2097,7 +2130,7 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   href: "/static/nprogress.css",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 22
   },
   __self: undefined
 }), __jsx("link", {
@@ -2105,19 +2138,48 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   href: "/static/styles.css",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 23
+  },
+  __self: undefined
+}), __jsx("link", {
+  re: "stylesheet",
+  href: "/static/maps.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 24
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "stylesheet",
+  href: "https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 25
   },
   __self: undefined
 })), __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 27
   },
   __self: undefined
-}), children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}), __jsx("main", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25
+    lineNumber: 28
+  },
+  __self: undefined
+}, __jsx("div", {
+  id: "container",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 29
+  },
+  __self: undefined
+}, children)), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 33
   },
   __self: undefined
 })));

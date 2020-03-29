@@ -2,8 +2,10 @@ import Link from 'next/link';
 import Rating from '../Ratings/Rating';
 import Item from '../Item/Item';
 
+import css from './Stores.scss';
+
 export default ({ storename, location, coordinates, missings, id, rating=false, ...props}) => (
-  <div className="Store">
+  <div className={css.stores}>
     <h2>
       <Link as={`/stores/${id}?rating=4`}
             href={`/stores?id=${id}&rating=4`}
@@ -17,9 +19,6 @@ export default ({ storename, location, coordinates, missings, id, rating=false, 
       Longitude: {coordinates.split(',')[1]} &nbsp;
       Langitude:  {coordinates.split(',')[0]}
     </p>
-
-    <h3>Missing Items</h3>
-    {missings ? missings.map(item=> <Item key={item.id} {...item} />): ""}
 
     {/* {process.env.SHOW_SPEAKER && <Item {...props} />} */}
     {rating && <Rating value={rating} />}

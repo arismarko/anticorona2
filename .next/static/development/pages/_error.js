@@ -9718,14 +9718,18 @@ try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Footer_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.scss */ "./src/components/Layout/Footer.scss");
+/* harmony import */ var _Footer_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Footer_scss__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Layout/Footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx("div", {
+    className: _Footer_scss__WEBPACK_IMPORTED_MODULE_1___default.a.footer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 4
     },
     __self: this
   }, "Footer");
@@ -9792,7 +9796,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 10
     },
     __self: this
-  }, "About us")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Add a store")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/contact",
     __source: {
       fileName: _jsxFileName,
@@ -9842,9 +9846,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Layout_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Layout.scss */ "./src/components/Layout/Layout.scss");
+/* harmony import */ var _Layout_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_Layout_scss__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Layout/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -9871,19 +9878,19 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = function
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
     },
     __self: this
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: this
   }, title), __jsx("meta", {
@@ -9891,7 +9898,7 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = function
     conent: "width=device-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: this
   }), __jsx("link", {
@@ -9899,7 +9906,7 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = function
     href: "/static/nprogress.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: this
   }), __jsx("link", {
@@ -9907,19 +9914,48 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = function
     href: "/static/styles.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
+    },
+    __self: this
+  }), __jsx("link", {
+    re: "stylesheet",
+    href: "/static/maps.css",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }), __jsx("link", {
+    rel: "stylesheet",
+    href: "https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
     },
     __self: this
   })), __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
-  }), children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx("div", {
+    id: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, children)), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
     },
     __self: this
   }));
@@ -10004,7 +10040,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 8:
 /*!*******************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=%2FVolumes%2FMacintosh%20HD%20(Wipro)%2FUsers%2Faris%2Fprojects%2Ffuckcorona%2Fanticorona%2Fanticorona%2Fsrc%2Fpages%2F_error.js ***!
   \*******************************************************************************************************************************************************************************************************/
@@ -10027,5 +10063,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[8,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=_error.js.map
