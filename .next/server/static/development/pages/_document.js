@@ -1370,10 +1370,10 @@ module.exports = __webpack_require__(/*! ./dist/pages/_document */ "./node_modul
 
 /***/ }),
 
-/***/ "./pages/_document.js":
-/*!****************************!*\
-  !*** ./pages/_document.js ***!
-  \****************************/
+/***/ "./src/pages/_document.js":
+/*!********************************!*\
+  !*** ./src/pages/_document.js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1384,7 +1384,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/anticorona/anticorona/pages/_document.js";
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/pages/_document.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1465,7 +1465,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! private-next-pages/_document.js */"./pages/_document.js");
+module.exports = __webpack_require__(/*! private-next-pages/_document.js */"./src/pages/_document.js");
 
 
 /***/ }),

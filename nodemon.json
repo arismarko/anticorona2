@@ -1,0 +1,5 @@
+  {
+    "watch": ["server"],
+    "exec": "node -r ts-node/register --inspect ./server/index.js",
+    "ext": "js, ts"
+  }
