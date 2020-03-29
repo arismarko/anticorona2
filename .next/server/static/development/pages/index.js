@@ -2348,6 +2348,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apollo_link_http__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_link_http__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! node-fetch */ "node-fetch");
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_4__);
+
+
 
 
 
@@ -2355,11 +2359,13 @@ __webpack_require__.r(__webpack_exports__);
 function createApolloClient(initialState, ctx) {
   // The `ctx` (NextPageContext) will only be present on the server.
   // use it to extract auth headers (ctx.req) or similar.
+  const olink = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_2__["createHttpLink"])({
+    uri: 'http://localhost:4400',
+    fetch: node_fetch__WEBPACK_IMPORTED_MODULE_4___default.a
+  });
   return new apollo_client__WEBPACK_IMPORTED_MODULE_0__["ApolloClient"]({
     ssrMode: Boolean(ctx),
-    link: new apollo_link_http__WEBPACK_IMPORTED_MODULE_2__["HttpLink"]({
-      uri: 'http://localhost:4400'
-    }),
+    link: olink,
     typeDefs: graphql_tag__WEBPACK_IMPORTED_MODULE_3___default.a`
       extend type Store {
         id: ID!
@@ -3710,6 +3716,17 @@ module.exports = require("next/head");
 /***/ (function(module, exports) {
 
 module.exports = require("next/router");
+
+/***/ }),
+
+/***/ "node-fetch":
+/*!*****************************!*\
+  !*** external "node-fetch" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("node-fetch");
 
 /***/ }),
 
