@@ -28,6 +28,31 @@
     ._3hdMkcqFlEbdbQl_IXXnva nav li a {
       color: #fff; }
 
+.Q4Ebz5IVsvNQtnWQjmEdv {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.qTBIW29RJwee0QCi21vsi {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(195, 195, 195, 0.6);
+  border-radius: 50%;
+  border-top-color: #636767;
+  animation: _3eRUB9w236y_3gyD12_thC 1s ease-in-out infinite;
+  -webkit-animation: _3eRUB9w236y_3gyD12_thC 1s ease-in-out infinite; }
+
+@keyframes _3eRUB9w236y_3gyD12_thC {
+  to {
+    -webkit-transform: rotate(360deg); } }
+
+@-webkit-keyframes _3eRUB9w236y_3gyD12_thC {
+  to {
+    -webkit-transform: rotate(360deg); } }
+
 ._2H-1xXzOGI2kb03DeLbfzx {
   padding: 10px; }
   ._2H-1xXzOGI2kb03DeLbfzx h2 {

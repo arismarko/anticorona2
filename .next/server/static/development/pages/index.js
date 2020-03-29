@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2856,6 +2856,59 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 /***/ }),
 
+/***/ "./src/components/Spinner/Spinner.js":
+/*!*******************************************!*\
+  !*** ./src/components/Spinner/Spinner.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _spinner_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./spinner.scss */ "./src/components/Spinner/spinner.scss");
+/* harmony import */ var _spinner_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_spinner_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Spinner/Spinner.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Spinner = () => __jsx("div", {
+  className: "spinner-overlay",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, __jsx("div", {
+  className: "spinner-container",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}));
+
+/* harmony default export */ __webpack_exports__["default"] = (Spinner);
+
+/***/ }),
+
+/***/ "./src/components/Spinner/spinner.scss":
+/*!*********************************************!*\
+  !*** ./src/components/Spinner/spinner.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"spinner-overlay": "Q4Ebz5IVsvNQtnWQjmEdv",
+	"spinner-container": "qTBIW29RJwee0QCi21vsi",
+	"spin": "_3eRUB9w236y_3gyD12_thC"
+};
+
+/***/ }),
+
 /***/ "./src/components/Stores/Stores.js":
 /*!*****************************************!*\
   !*** ./src/components/Stores/Stores.js ***!
@@ -3213,20 +3266,19 @@ const withApollo = ({
 /*!****************************!*\
   !*** ./src/pages/index.js ***!
   \****************************/
-/*! exports provided: allStoresQueryVars, default */
+/*! exports provided: allStoresByItemQueryVars, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allStoresQueryVars", function() { return allStoresQueryVars; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "allStoresByItemQueryVars", function() { return allStoresByItemQueryVars; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Stores_Stores__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Stores/Stores */ "./src/components/Stores/Stores.js");
-/* harmony import */ var _components_Items_Items__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Items/Items */ "./src/components/Items/Items.js");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Stores_Stores__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Stores/Stores */ "./src/components/Stores/Stores.js");
+/* harmony import */ var _components_Items_Items__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Items/Items */ "./src/components/Items/Items.js");
+/* harmony import */ var _components_Spinner_Spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Spinner/Spinner */ "./src/components/Spinner/Spinner.js");
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
@@ -3238,8 +3290,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_pages_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles_pages_scss__WEBPACK_IMPORTED_MODULE_10__);
 
 var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/pages/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
@@ -3257,8 +3309,8 @@ const MapWithNoSSR = next_dynamic__WEBPACK_IMPORTED_MODULE_9___default()(() => _
   }
 });
 const ALL_STORES_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_7___default.a`
-  query {
-    getAllStores{
+  query getStoresByItemName($name: String!) {
+    getStoresByItemName(name:$name){
       id,
       location,
       coordinates,
@@ -3266,18 +3318,25 @@ const ALL_STORES_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_7___default.a`
     }
   }
 `;
-const allStoresQueryVars = {
-  name: 'tesco1'
+const allStoresByItemQueryVars = {
+  name: 'bread'
 };
 
-const Index = function (props) {
+const Index = function ({
+  query
+}) {
+  const missing = query.missing ? query.missing : "bread";
   const {
     loading,
     error,
     data,
     fetchMore,
     networkStatus
-  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_6__["useQuery"])(ALL_STORES_QUERY);
+  } = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_6__["useQuery"])(ALL_STORES_QUERY, {
+    variables: {
+      name: missing
+    }
+  });
   const datapoints = [{
     "latitude": 51.514248,
     "longitude": -0.093145
@@ -3285,75 +3344,89 @@ const Index = function (props) {
     "latitude": 52.466667,
     "longitude": -1.916667
   }];
-  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 48
     },
     __self: this
   }, __jsx("h1", {
     className: _styles_pages_scss__WEBPACK_IMPORTED_MODULE_10___default.a.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 49
     },
     __self: this
   }, " Find my item"), __jsx("header", {
     className: _styles_pages_scss__WEBPACK_IMPORTED_MODULE_10___default.a.header,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
-  }, __jsx(_components_Items_Items__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx(_components_Items_Items__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   })), __jsx("div", {
     className: `columns mapview ${_styles_pages_scss__WEBPACK_IMPORTED_MODULE_10___default.a.pages}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: this
   }, __jsx("section", {
     className: "column is-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 54
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 55
     },
     __self: this
-  }, "Stores"), data ? data.getAllStores.map(s => __jsx(_components_Stores_Stores__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, "Stores"), loading !== true ? data.getStoresByItemName.map(s => __jsx(_components_Stores_Stores__WEBPACK_IMPORTED_MODULE_3__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     key: s.id
   }, s, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 57
     },
     __self: this
-  }))) : ""), __jsx("aside", {
+  }))) : __jsx(_components_Spinner_Spinner__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  })), __jsx("aside", {
     className: "column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 61
     },
     __self: this
   }, __jsx(MapWithNoSSR, {
     points: datapoints,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 62
     },
     __self: this
   }))));
+};
+
+Index.getInitialProps = async ({
+  query
+}) => {
+  return {
+    query
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_lib_apollo__WEBPACK_IMPORTED_MODULE_8__["withApollo"])()(Index));
@@ -3375,7 +3448,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
@@ -3604,17 +3677,6 @@ module.exports = require("core-js/library/fn/weak-map");
 /***/ (function(module, exports) {
 
 module.exports = require("graphql-tag");
-
-/***/ }),
-
-/***/ "isomorphic-unfetch":
-/*!*************************************!*\
-  !*** external "isomorphic-unfetch" ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 
