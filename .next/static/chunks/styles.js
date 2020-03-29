@@ -30,7 +30,7 @@ module.exports = {"Speaker":"BjMZhsp49R6sdgL3xPAwP"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1585442153908");
+            injectCss(link, link.href.split("?")[0] + "?unix=1585505341763");
           });
       }
     }
@@ -68,7 +68,7 @@ module.exports = {"navigation":"_3hdMkcqFlEbdbQl_IXXnva"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1585442153695");
+            injectCss(link, link.href.split("?")[0] + "?unix=1585505341432");
           });
       }
     }
@@ -106,7 +106,7 @@ module.exports = {"footer":"_3BrbjHEyR4fmO75lq64X3p"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1585442153914");
+            injectCss(link, link.href.split("?")[0] + "?unix=1585481916145");
           });
       }
     }
@@ -144,7 +144,7 @@ module.exports = {"mainbody":"_3A3beaUlXaEhC9wey5JB38"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1585442153688");
+            injectCss(link, link.href.split("?")[0] + "?unix=1585481916141");
           });
       }
     }
@@ -182,7 +182,45 @@ module.exports = {"mapContainer":"_1LOS-XlOQ2u75mesaXxNmA","content":"KBJnVJVOUe
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1585442153708");
+            injectCss(link, link.href.split("?")[0] + "?unix=1585505341492");
+          });
+      }
+    }
+  
+
+/***/ }),
+
+/***/ "./src/components/Spinner/spinner.scss":
+/*!*********************************************!*\
+  !*** ./src/components/Spinner/spinner.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"spinner-overlay":"Q4Ebz5IVsvNQtnWQjmEdv","spinner-container":"qTBIW29RJwee0QCi21vsi","spin":"_3eRUB9w236y_3gyD12_thC"};;
+    if (true) {
+      var injectCss = function injectCss(prev, href) {
+        var link = prev.cloneNode();
+        link.href = href;
+        link.onload = function() {
+          prev.parentNode.removeChild(prev);
+        };
+        prev.stale = true;
+        prev.parentNode.insertBefore(link, prev);
+      };
+      module.hot.dispose(function() {
+        window.__webpack_reload_css__ = true;
+      });
+      if (window.__webpack_reload_css__) {
+        module.hot.__webpack_reload_css__ = false;
+        console.log("[HMR] Reloading stylesheets...");
+        var prefix = document.location.protocol + '//' + document.location.host;
+        document
+          .querySelectorAll("link[href][rel=stylesheet]")
+          .forEach(function(link) {
+            if (!link.href.match(prefix) || link.stale) return;
+            injectCss(link, link.href.split("?")[0] + "?unix=1585505938075");
           });
       }
     }
@@ -220,7 +258,7 @@ module.exports = {"stores":"Bfl5KkRRndhUZkPpDXw2d"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1585442153703");
+            injectCss(link, link.href.split("?")[0] + "?unix=1585505341422");
           });
       }
     }
@@ -258,7 +296,7 @@ module.exports = {"pages":"_2H-1xXzOGI2kb03DeLbfzx","header":"_2S0lLhptLNYs6WaUQ
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1585442153680");
+            injectCss(link, link.href.split("?")[0] + "?unix=1585505341206");
           });
       }
     }
