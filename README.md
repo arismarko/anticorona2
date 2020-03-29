@@ -1,11 +1,14 @@
 # anticorona
+To install you will need to first run 
 
-Navigate to the main directory and run at the same time the following two commands
+npm install
+
 
 To start the app on development run 
 
-npm run dev
+npm run dev2
 
-To start the mockapi server 
 
-PORT=3001 router routes  
+The backend for this app is on this seperate repo.
+
+https://github.com/arismarko/prisma-stepbystep 
