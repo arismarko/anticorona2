@@ -6,7 +6,7 @@ export default ({ user = {} }) => (
         <Link href="/">
           <a>Home</a>
         </Link>
-        <Link href="/about">
+        <Link href="/addstore">
           <a>Add a store</a>
         </Link>
         <Link href="/contact">
