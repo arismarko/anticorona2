@@ -53,6 +53,7 @@
   to {
     -webkit-transform: rotate(360deg); } }
 
+
 ._2H-1xXzOGI2kb03DeLbfzx {
   padding: 10px; }
   ._2H-1xXzOGI2kb03DeLbfzx h2 {
@@ -62,8 +63,10 @@
   width: 100%; }
 
 ._3rFENcq5tEGQS_0Bsmw-t {
-  padding: 20px;
-  font-weight: 600; }
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px; }
 
 ._1LOS-XlOQ2u75mesaXxNmA {
   display: flex;

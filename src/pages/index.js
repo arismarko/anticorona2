@@ -40,8 +40,9 @@ const Index = function ({query})  {
     }
   )
 
-  const datapoints =  [  {"latitude": 51.514248 ,"longitude":-0.093145},
-  {"latitude": 52.466667 ,"longitude":-1.916667}];
+  const datapoints = loading !== true ? data.getStoresByItemName.map(s=> {
+    return {'latitude': parseFloat(s.coordinates.split(',')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
+  }): [];
 
   return (
     
