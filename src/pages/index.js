@@ -32,7 +32,7 @@ export const allStoresByItemQueryVars = {
 
 const Index = function ({query})  {
 
-  const missing = query.missing ? query.missing : "bread";
+  const missing = query.missing ? query.missing : "masks";
 
   const { loading, error, data, fetchMore, networkStatus } = useQuery(
     ALL_STORES_QUERY,{
@@ -55,8 +55,13 @@ const Index = function ({query})  {
           <section className="column is-4">
             <h2 >Stores</h2>
             {loading !== true
-              ? data.getStoresByItemName.map(s=> <Stores key={s.id} {...s} />)
-              : <Spinner />
+              ? data.getStoresByItemName.map(s=> <Stores key={s.id} {...s} {...missing} missing={missing} />)
+              : ""
+            }
+
+            {loading !== true ? 
+              data.getStoresByItemName.length === 0 ? `No stores that sell ${missing} please come back later` : ""
+              : ""
             }
           </section>
           <aside className="column">

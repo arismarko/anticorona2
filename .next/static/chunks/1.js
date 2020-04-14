@@ -16327,7 +16327,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Map_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Map.scss */ "./src/components/Map/Map.scss");
 /* harmony import */ var _Map_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Map_scss__WEBPACK_IMPORTED_MODULE_5__);
 
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Map/Map.js";
+var _jsxFileName = "/Users/aristosmarkogiannakis/Projects/fuckcorona/anticorona/src/components/Map/Map.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
 
 
@@ -16400,7 +16400,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/src/components/Map/Pins.js";
+var _jsxFileName = "/Users/aristosmarkogiannakis/Projects/fuckcorona/anticorona/src/components/Map/Pins.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
