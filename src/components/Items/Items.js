@@ -6,10 +6,10 @@ const Items = () => {
             <nav>
                 <ul>
                     <li>
-                        <a href="/?missing=masks">Masks</a>
+                        <a href="/?missing=bread">Masks</a>
                     </li>
                     <li>
-                        <a href="/?missing=toiletpaper">Toilet paper</a>
+                        <a href="/?missing=toiletroll">Toilet paper</a>
                     </li>
                     <li>
                         <a href="/?missing=pasta">Pasta</a>

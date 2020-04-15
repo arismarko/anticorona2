@@ -8,8 +8,17 @@ const prisma = new PrismaClient();
 module.exports = router;
 
 router.get('/api/stores', (req, res) => {
-
-    prisma.store.findMany().then(results => {
+    console.log(req.query.missing);
+    prisma.store.findMany({ where: 
+        { 
+            Item: {
+               some: 
+                    {
+                        item: req.query.missing
+                    } 
+            } 
+        }
+    }).then(results => {
         res.json(results);
     })
 
@@ -28,7 +37,7 @@ router.get('/api/addstores', async (req, res) => {
         date: new Date(),
         Item: {
           create: [
-            { item: 'toiletroll', number: '20' },
+            { item: 'bread', number: '20' },
             { item: 'masks', number: '20' },
           ],
         },

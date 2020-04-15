@@ -20,15 +20,15 @@ const AddStore = () => (
                 <Form>
                     <label>
                         Movie Name
-          <Field name="movieName" type="text"></Field>
+                        <Field name="movieName" type="text"></Field>
                     </label>
                     <label>
                         Director
-          <Field name="director" type="text"></Field>
+                      <Field name="director" type="text"></Field>
                     </label>
                     <label>
                         Year Released
-          <Field name="yearReleased" type="text"></Field>
+                        <Field name="yearReleased" type="text"></Field>
                     </label>
                     <button type="submit">Submit</button>
                 </Form>
