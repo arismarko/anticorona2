@@ -1,6 +1,7 @@
 
 const express = require('express');
 const router = express.Router();
+const bodyParser = require('body-parser');
 const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
@@ -8,14 +9,11 @@ const prisma = new PrismaClient();
 module.exports = router;
 
 router.get('/api/stores', (req, res) => {
-    console.log(req.query.missing);
     prisma.store.findMany({ where: 
-        { 
+       { 
             Item: {
                some: 
-                    {
-                        item: req.query.missing
-                    } 
+                    {item: req.query.missing} 
             } 
         }
     }).then(results => {
@@ -29,18 +27,21 @@ router.get('/api/stores/:id', (req, res) => {
 //   res.json(data.stores.find(s => s.id === req.params.id));
 });
 
-router.get('/api/addstores', async (req, res) => {
-   const store =  await prisma.store.create({ data: {
-        storename: 'tesco',
-        location: 'Camden',
-        coordinates: '23444,34444',
-        date: new Date(),
-        Item: {
-          create: [
-            { item: 'bread', number: '20' },
-            { item: 'masks', number: '20' },
-          ],
-        },
-      }});
-    res.json(store);
+router.post('/api/addstores', async (req, res) => {
+
+  const { body } = req;
+
+
+  const store =  await prisma.store.create({ data: {
+    storename: body.storename,
+    location: body.location,
+    coordinates: body.coordinates,
+    date: new Date(),
+    Item: {
+      create: body.items,
+    },
+  }});
+
+  res.json(store);
+
 })

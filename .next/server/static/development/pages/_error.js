@@ -2125,7 +2125,7 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   __self: undefined
 }), __jsx("link", {
   rel: "stylesheet",
-  href: "/static/nprogress.css",
+  href: "https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 22
@@ -2133,10 +2133,18 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   __self: undefined
 }), __jsx("link", {
   rel: "stylesheet",
-  href: "/static/styles.css",
+  href: "/static/nprogress.css",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 23
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "stylesheet",
+  href: "/static/styles.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 24
   },
   __self: undefined
 }), __jsx("link", {
@@ -2144,7 +2152,7 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   href: "/static/maps.css",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 25
   },
   __self: undefined
 }), __jsx("link", {
@@ -2152,32 +2160,32 @@ next_router__WEBPACK_IMPORTED_MODULE_5___default.a.onRouteChangeError = () => np
   href: "https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25
+    lineNumber: 26
   },
   __self: undefined
 })), __jsx(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 27
+    lineNumber: 28
   },
   __self: undefined
 }), __jsx("main", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 29
   },
   __self: undefined
 }, __jsx("div", {
   id: "container",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 29
+    lineNumber: 30
   },
   __self: undefined
 }, children)), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 33
+    lineNumber: 34
   },
   __self: undefined
 })));
