@@ -45,7 +45,7 @@ router.post('/api/addstores', async (req, res) => {
   res.json(store);
 
 })
-=======
+
 // const data = require('../mock-api/db.json');
 
 module.exports = router;

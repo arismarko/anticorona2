@@ -73,8 +73,8 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": "./src/components/Spinner/spinner.scss",
-      "name": "./src/components/Spinner/spinner.scss",
+      "id": "./src/components/Spinner/Spinner.scss",
+      "name": "./src/components/Spinner/Spinner.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
