@@ -11,7 +11,8 @@
     "dev-server": "PORT=3001 router ./routes/index.js",
     "dev2": "nodemon",
     "build2": "next build && tsc --project tsconfig.json",
-    "export": "npm run build && next export"
+    "export": "next export",
+    "deploy": "npm run build && npm run export"
   },
   "keywords": [],
   "author": "",
