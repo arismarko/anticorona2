@@ -13,7 +13,9 @@ const StoresPage = ({store, rating}) => (
 
 StoresPage.getInitialProps = async ({query}) => {
 
-    const res = await fetch(`http://localhost:3001/stores/${query.id}`);
+    
+
+    const res = await fetch(`${process.env.SERVER}/stores/${query.id}`);
     const store = await res.json();
 
     // console.log(store);
