@@ -14,10 +14,7 @@ module.exports = withSass({
   ) {
     return {
       "/": { page: "/", query: { missing: 'toiletroll' } },
-      "/api/addstores": {page: "/api/addstores"},
-      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'toiletroll' }},
-      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'bread' }},
-      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'pasta' }}
+      '/hello-nextjs': { page: '/', query: { missing: 'hello-nextjs' } },
       }
     }
 });
