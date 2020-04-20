@@ -15,7 +15,9 @@ module.exports = withSass({
     return {
       "/": { page: "/" },
       "/api/addstores": {page: "/api/addstores"},
-      "/api/stores": {page: "/api/stores"}
+      "/p/hello-nextjs": {page: "/api/stores", query: { query: 'toiletroll' }},
+      "/p/hello-nextjs": {page: "/api/stores", query: { query: 'bread' }},
+      "/p/hello-nextjs": {page: "/api/stores", query: { query: 'pasta' }}
       }
     }
 });
