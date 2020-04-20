@@ -1,13 +1,25 @@
 {
   "../components/Map/Map": [
     {
+      "id": "./src/components/Layout/Header.scss",
+      "name": "./src/components/Layout/Header.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 1,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
       "id": "./src/components/Layout/Footer.scss",
       "name": "./src/components/Layout/Footer.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 1,
+      "id": 2,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -19,7 +31,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -31,7 +43,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -43,7 +55,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -55,7 +67,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -67,7 +79,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -79,7 +91,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -91,7 +103,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 11,
+      "id": 12,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -103,7 +115,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -433,6 +445,12 @@
       "publicPath": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/process/browser.js",
+      "name": "./node_modules/process/browser.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
       "id": "./node_modules/react-dom/index.js",
       "name": "./node_modules/react-dom/index.js",
       "file": "static/chunks/1.js",
@@ -685,6 +703,12 @@
       "publicPath": "static/chunks/1.js"
     },
     {
+      "id": "./node_modules/webpack/buildin/global.js",
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
       "id": "./src/components/Map/Map.js",
       "name": "./src/components/Map/Map.js",
       "file": "static/chunks/1.js",
@@ -703,26 +727,6 @@
       "name": "./node_modules/next/dist/client/dev/noop.js",
       "file": "static/chunks/0.js",
       "publicPath": "static/chunks/0.js"
-    }
-  ],
-  "@apollo/react-ssr": [
-    {
-      "id": "./node_modules/@apollo/react-ssr/lib/react-ssr.esm.js",
-      "name": "./node_modules/@apollo/react-ssr/lib/react-ssr.esm.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-dom/cjs/react-dom-server.browser.development.js",
-      "name": "./node_modules/react-dom/cjs/react-dom-server.browser.development.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-dom/server.browser.js",
-      "name": "./node_modules/react-dom/server.browser.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
     }
   ]
 }

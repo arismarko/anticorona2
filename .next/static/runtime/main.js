@@ -5157,7 +5157,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/fuckcorona/anticorona/anticorona/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Volumes/Macintosh HD (Wipro)/Users/aris/projects/other/fuckcorona/anticorona/anticorona/.next");
       return error;
     }
   };

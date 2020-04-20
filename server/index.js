@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const bodyParser = require('body-parser');
 
 const dev = process.env.NODE_ENV !== 'production';
 
@@ -13,6 +14,11 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    // parse application/x-www-form-urlencoded
+    server.use(bodyParser.urlencoded({ extended: false }))
+
+    // parse application/json
+    server.use(bodyParser.json())
     server.use(require('./routes'));
 
     server.get('/stores/:id', (req, res) => {
