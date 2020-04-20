@@ -10032,7 +10032,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 10:
+/***/ 0:
 /*!**********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=%2FUsers%2Faristosmarkogiannakis%2FProjects%2Ffuckcorona%2Fanticorona%2Fsrc%2Fpages%2F_error.js ***!
   \**********************************************************************************************************************************************************************/
@@ -10055,5 +10055,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[10,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=_error.js.map
