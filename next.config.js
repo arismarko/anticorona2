@@ -13,11 +13,11 @@ module.exports = withSass({
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
-      "/": { page: "/" },
+      "/": { page: "/", query: { missings: 'toiletroll' } },
       "/api/addstores": {page: "/api/addstores"},
-      "/p/hello-nextjs": {page: "/api/stores", query: { query: 'toiletroll' }},
-      "/p/hello-nextjs": {page: "/api/stores", query: { query: 'bread' }},
-      "/p/hello-nextjs": {page: "/api/stores", query: { query: 'pasta' }}
+      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'toiletroll' }},
+      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'bread' }},
+      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'pasta' }}
       }
     }
 });
