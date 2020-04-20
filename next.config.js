@@ -4,12 +4,10 @@ const withSass = require('@zeit/next-sass');
 
 module.exports = withSass({
   cssModules: true,
-  webpack: config => {
-    return config;
+  cssLoaderOptions: {
+    importLoaders: 1,
+    localIdentName: "[local]___[hash:base64:5]",
   },
-});
-
-module.exports = {
   exportPathMap: async function(
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
@@ -23,4 +21,4 @@ module.exports = {
       "/api/addstores": {page: "/api/addstores"}
       }
     }
-}
+});
