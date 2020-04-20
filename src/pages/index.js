@@ -14,7 +14,7 @@ const MapWithNoSSR = dynamic(() => import('../components/Map/Map'), {
   ssr: false
 });
 
-const Index = function ({stores, missing})  {
+const Index = function ({stores, missing='bread'})  {
 
   // console.log(data);
 
