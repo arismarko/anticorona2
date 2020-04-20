@@ -14,11 +14,8 @@ module.exports = withSass({
   ) {
     return {
       "/": { page: "/" },
-      "/api/": {
-        page: "/stores/[slug]",
-        query: { missings: "toiletroll" }
-      },
-      "/api/addstores": {page: "/api/addstores"}
+      "/api/addstores": {page: "/api/addstores"},
+      "/api/stores": {page: "/api/stores"}
       }
     }
 });
