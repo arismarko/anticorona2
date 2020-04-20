@@ -53,7 +53,7 @@ const Index = function ({stores, missing})  {
   )
 }
 
-Index.getInitialProps = async ({req={query: {missing:''}}}) => {
+Index.getInitialProps = async ({req}) => {
 
   const {missing} = req.query;
 
