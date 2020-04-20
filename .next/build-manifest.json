@@ -16,10 +16,11 @@
       "static/runtime/main-45467f7cdff3369d5249.js"
     ],
     "/_error": [
-      "static/runtime/webpack-b766eeb0c475de0bfd63.js",
-      "static/css/commons.f6143561.chunk.css",
-      "static/chunks/commons.4dbe70fbe8dd44280df5.js",
-      "static/runtime/main-45467f7cdff3369d5249.js"
+
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+
     ],
     "/_polyfills": [
       "static/runtime/polyfills-18bae9d9aeb560fecbd3.js"

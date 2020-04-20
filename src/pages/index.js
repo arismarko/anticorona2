@@ -2,11 +2,11 @@ import Layout from '../components/Layout';
 import React, { useState, useEffect } from 'react';
 import Stores from '../components/Stores/Stores';
 import Items from '../components/Items/Items';
+import Link from 'next/link'
+import fetch from 'isomorphic-unfetch';
 import Spinner from '../components/Spinner/Spinner';
-import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import { withApollo } from '../lib/apollo';
 import dynamic from 'next/dynamic';
+
 
 import css from './styles/pages.scss';
 
@@ -14,35 +14,15 @@ const MapWithNoSSR = dynamic(() => import('../components/Map/Map'), {
   ssr: false
 });
 
-const ALL_STORES_QUERY = gql`
-  query getStoresByItemName($name: String!) {
-    getStoresByItemName(name:$name){
-      id,
-      location,
-      coordinates,
-      storename
-    }
-  }
-`
+const Index = function ({stores, missing})  {
 
-export const allStoresByItemQueryVars = {
-    name: 'bread'
-}
+  // console.log(data);
 
-
-const Index = function ({query})  {
-
-  const missing = query.missing ? query.missing : "bread";
-
-  const { loading, error, data, fetchMore, networkStatus } = useQuery(
-    ALL_STORES_QUERY,{
-      variables: { name: missing },
-    }
-  )
-
-  const datapoints = loading !== true ? data.getStoresByItemName.map(s=> {
-    return {'latitude': parseFloat(s.coordinates.split(',')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
+  const datapoints = loading !== true ? stores.map(s=> {
+    return {'latitude': parseFloat(s.coordinates.split(' ')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
   }): [];
+
+  const loading = true;
 
   return (
     
@@ -54,10 +34,16 @@ const Index = function ({query})  {
         <div className={`columns mapview ${css.pages}`}>
           <section className="column is-4">
             <h2 >Stores</h2>
-            {loading !== true
-              ? data.getStoresByItemName.map(s=> <Stores key={s.id} {...s} />)
-              : <Spinner />
+            {loading === true
+              ? stores.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={missing} />)
+              : ""
             }
+
+            {loading !== true ? 
+              stores.length === 0 ? `No stores that sell ${missing} please come back later` : ""
+              : ""
+            }
+
           </section>
           <aside className="column">
             <MapWithNoSSR points={datapoints}/>
@@ -67,9 +53,15 @@ const Index = function ({query})  {
   )
 }
 
-Index.getInitialProps = async ({query}) => {
+Index.getInitialProps = async ({req={query: {missing:''}}}) => {
 
-  return {query};
-};
+  const {missing} = req.query;
 
-export default withApollo()(Index)
+  const tes = await fetch(`http://localhost:3000/api/stores?missing=${missing}`);
+  const data = await tes.json();
+
+
+  return {stores: data, missing: missing};
+}
+
+export default Index;

@@ -1,20 +1,18 @@
 import Link from 'next/link';
 
+import styles from "./Header.scss";
+
 export default ({ user = {} }) => (
-    <header className="Header">
+    <header className={styles.header}>
       <nav>
         <Link href="/">
-          <a>Home</a>
+          <a>All Stores</a>
         </Link>
         <Link href="/addstore">
-          <a>Add a store</a>
+          <a>Add your finding</a>
         </Link>
-        <Link href="/contact">
-          <a>Contact us</a>
-        </Link>
-        <Link href="/session">
-          <a>Stores</a>
-        </Link>
+
+        <p className={styles.message}>Lets beat Covid-19</p>
       </nav>
     </header>
   );

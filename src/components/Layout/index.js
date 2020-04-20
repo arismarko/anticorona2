@@ -19,6 +19,7 @@ export default ({ children, title='Anticorona' }) => (
           <Head>
             <title>{title}</title>
             <meta name="viewport" conent="width=device-width" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
             <link rel="stylesheet" href="/static/nprogress.css" />
             <link rel="stylesheet" href="/static/styles.css" />
             <link re="stylesheet" href="/static/maps.css" />

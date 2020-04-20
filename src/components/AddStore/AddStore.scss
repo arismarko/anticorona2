@@ -1,0 +1,20 @@
+.hide {
+    display: none;
+}
+
+.modal {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out
+}
+
+.formborder {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

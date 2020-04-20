@@ -19,6 +19,10 @@
 
             a {
                 color: #fff;
+                
+                &:hover {
+                    background-color: black;
+                }
             }
         }
     }
