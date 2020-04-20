@@ -13,8 +13,7 @@ module.exports = withSass({
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
-      "/": { page: "/", query: { missing: 'toiletroll' } },
-      '/hello-nextjs': { page: '/', query: { missing: 'hello-nextjs' } },
+      "/": { page: "/", missing: 'hello' },
       }
     }
 });
