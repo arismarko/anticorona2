@@ -10,7 +10,8 @@
     "mock-api": "json-server mock-api/db.json --port 3001  --routes mock-api/routes.json",
     "dev-server": "PORT=3001 router ./routes/index.js",
     "dev2": "nodemon",
-    "build2": "next build && tsc --project tsconfig.json"
+    "build2": "next build && tsc --project tsconfig.json",
+    "export": "npm run build && next export"
   },
   "keywords": [],
   "author": "",
