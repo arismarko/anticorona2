@@ -8,3 +8,19 @@ module.exports = withSass({
     return config;
   },
 });
+
+module.exports = {
+  exportPathMap: async function(
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      "/": { page: "/" },
+      "/api/": {
+        page: "/stores/[slug]",
+        query: { missings: "toiletroll" }
+      },
+      "/api/addstores": {page: "/api/addstores"}
+      }
+    }
+}

@@ -35,12 +35,12 @@ const Index = function ({stores, missing})  {
           <section className="column is-4">
             <h2 >Stores</h2>
             {loading === true
-              ? stores.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={missing?missing:''} />)
+              ? stores.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={missing} />)
               : ""
             }
 
             {loading !== true ? 
-              stores.length === 0 ? `No stores that sell ${missing?missing:''} please come back later` : ""
+              stores.length === 0 ? `No stores that sell ${missing} please come back later` : ""
               : ""
             }
 
@@ -57,10 +57,9 @@ Index.getInitialProps = async ({req={query: {missing:''}}}) => {
 
   const {missing} = req.query;
 
-  const tes = await fetch(`${process.env.SERVER}/api/stores?missing=${missing ? missing: 'bread'}`);
+  const tes = await fetch(`${process.env.SERVER}/api/stores?missing=${missing}`);
   const data = await tes.json();
-
-  return {stores: data, missing: missing ? missing: 'bread'};
+  return {stores: data, missing: missing};
 }
 
 export default Index;
