@@ -4,9 +4,20 @@ const withSass = require('@zeit/next-sass');
 
 module.exports = withSass({
   cssModules: true,
-  webpack: config => {
-    config.plugins.push(new webpack.EnvironmentPlugin(['SHOW_SPEAKER']));
-
-    return config;
+  cssLoaderOptions: {
+    importLoaders: 1,
+    localIdentName: "[local]___[hash:base64:5]",
   },
+  exportPathMap: async function(
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      "/": { page: "/", query: { missing: 'toiletroll' } },
+      "/api/addstores": {page: "/api/addstores"},
+      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'toiletroll' }},
+      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'bread' }},
+      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'pasta' }}
+      }
+    }
 });
