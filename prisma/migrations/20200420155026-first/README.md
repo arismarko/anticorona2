@@ -1,6 +1,6 @@
-# Migration `20200415192525-first`
+# Migration `20200420155026-first`
 
-This migration has been generated at 4/15/2020, 7:25:25 PM.
+This migration has been generated at 4/20/2020, 3:50:26 PM.
 You can check out the [state of the schema](./schema.prisma) after the migration.
 
 ## Database Steps
@@ -42,17 +42,17 @@ CREATE  INDEX "quaint"."_ItemToStore_B_index" ON "_ItemToStore"("B")
 
 ```diff
 diff --git schema.prisma schema.prisma
-migration ..20200415192525-first
+migration ..20200420155026-first
 --- datamodel.dml
 +++ datamodel.dml
-@@ -1,0 +1,33 @@
+@@ -1,0 +1,35 @@
 +generator client {
 +  provider = "prisma-client-js"
 +}
 +
 +datasource db {
-+  provider="sqlite"
-+  url=env("DATABASE_URL")
++  provider = "sqlite"
++  url      = env("DATABASE_URL")
 +}
 +
 +model Store {
@@ -61,6 +61,7 @@ migration ..20200415192525-first
 +  id            Int             @default(autoincrement()) @id
 +  location      String?
 +  storename     String
++  StoresOnItems StoresOnItems[]
 +  Item          Item[]          @relation(references: [id])
 +}
 +
@@ -77,6 +78,7 @@ migration ..20200415192525-first
 +  storeId Int
 +  Item    Item  @relation(fields: [itemId], references: [id])
 +  Store   Store @relation(fields: [storeId], references: [id])
++
 +  @@id([storeId, itemId])
 +}
 ```

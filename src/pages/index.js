@@ -18,9 +18,9 @@ const Index = function ({stores, missing})  {
 
   // console.log(data);
 
-  // const datapoints = loading !== true ? data.map(s=> {
-  //   return {'latitude': parseFloat(s.coordinates.split(',')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
-  // }): [];
+  const datapoints = loading !== true ? stores.map(s=> {
+    return {'latitude': parseFloat(s.coordinates.split(' ')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
+  }): [];
 
   const loading = true;
 
@@ -46,7 +46,7 @@ const Index = function ({stores, missing})  {
 
           </section>
           <aside className="column">
-            {/* <MapWithNoSSR points={datapoints}/> */}
+            <MapWithNoSSR points={datapoints}/>
           </aside>
         </div>
     </Layout>

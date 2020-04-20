@@ -30,5 +30,6 @@ model StoresOnItems {
   storeId Int
   Item    Item  @relation(fields: [itemId], references: [id])
   Store   Store @relation(fields: [storeId], references: [id])
+
   @@id([storeId, itemId])
 }

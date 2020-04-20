@@ -37,37 +37,13 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": "./src/components/AddStore/AddStore.scss",
-      "name": "./src/components/AddStore/AddStore.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 5,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "./src/pages/styles/pages.scss",
-      "name": "./src/pages/styles/pages.scss",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 6,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
       "id": "./src/components/Item/Item.scss",
       "name": "./src/components/Item/Item.scss",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 7,
+      "id": 4,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -79,7 +55,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 8,
+      "id": 5,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -91,7 +67,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 9,
+      "id": 6,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -103,7 +79,31 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 10,
+      "id": 7,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/pages/styles/pages.scss",
+      "name": "./src/pages/styles/pages.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 8,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/AddStore/AddStore.scss",
+      "name": "./src/components/AddStore/AddStore.scss",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 12,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -115,7 +115,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 11,
+      "id": 9,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
