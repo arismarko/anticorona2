@@ -14,7 +14,7 @@ const MapWithNoSSR = dynamic(() => import('../components/Map/Map'), {
   ssr: false
 });
 
-const Index = function ({stores, missing='bread'})  {
+const Index = function ({stores, missing})  {
 
   // console.log(data);
 
@@ -35,12 +35,12 @@ const Index = function ({stores, missing='bread'})  {
           <section className="column is-4">
             <h2 >Stores</h2>
             {loading === true
-              ? stores.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={missing} />)
+              ? stores.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={missing?missing:''} />)
               : ""
             }
 
             {loading !== true ? 
-              stores.length === 0 ? `No stores that sell ${missing} please come back later` : ""
+              stores.length === 0 ? `No stores that sell ${missing?missing:''} please come back later` : ""
               : ""
             }
 
