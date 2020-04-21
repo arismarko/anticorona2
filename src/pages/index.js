@@ -18,11 +18,11 @@ const Index = function ({stores, missing})  {
 
   // console.log(data);
 
+  const loading = true;
+
   const datapoints = loading !== true ? stores.map(s=> {
     return {'latitude': parseFloat(s.coordinates.split(' ')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
   }): [];
-
-  const loading = true;
 
   return (
     
