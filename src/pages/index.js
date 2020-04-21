@@ -57,10 +57,12 @@ Index.getInitialProps = async ({req}) => {
 
   const {missing} = req.hasOwnProperty('query')?req.query:{missing: ''};
 
-  const tes = await fetch(`${process.env.SERVER}/api/stores?missing=${missing}`);
-  let  data = [];
+  // const tes = await fetch(`${process.env.SERVER}/api/stores?missing=${missing}`);
+  // let  data = [];
 
-    data   = await tes.json();
+  //   data   = await tes.json();
+
+  const data = [];
 
   return {stores: data, missing: missing};
 }
