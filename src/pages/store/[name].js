@@ -31,7 +31,6 @@ export default function Store() {
     return {'latitude': parseFloat(s.coordinates.split(',')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
   });
 
-
   return (
     <Layout>
         <h1 className={css.title}> Find my item</h1>
