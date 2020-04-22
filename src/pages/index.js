@@ -20,9 +20,9 @@ const Index = function ({stores, missing})  {
 
   const loading = true;
 
-  const datapoints = loading !== true ? stores.map(s=> {
-    return {'latitude': parseFloat(s.coordinates.split(' ')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
-  }): [];
+  const datapoints = stores.map(s=> {
+    return {'latitude': parseFloat(s.coordinates.split(',')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
+  });
 
   return (
     
@@ -53,18 +53,14 @@ const Index = function ({stores, missing})  {
   )
 }
 
-Index.getInitialProps = async ({req}) => {
+Index.getInitialProps = async ({ req } ) => {
+  let data = [];
 
-  console.log(req);
+  let missing = Object.keys(req.query).length === 0 ? 'bread'  : req.query.missing;
 
-  const {missing} = req.hasOwnProperty('query')?req.query:{missing: ''};
+  const tes = await fetch(`${process.env.SERVER}/api/stores?missing=${missing}`);
 
-  // const tes = await fetch(`${process.env.SERVER}/api/stores?missing=${missing}`);
-  // let  data = [];
-
-  //   data   = await tes.json();
-
-  const data = [];
+  data   = await tes.json();
 
   return {stores: data, missing: missing};
 }
