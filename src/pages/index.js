@@ -19,10 +19,11 @@ const MapWithNoSSR = dynamic(() => import('../components/Map/Map'), {
     ssr: false
 });
 
-export default function Store() {
+export default function Index({query}){
+
   const router = useRouter()
 
-  const { data, error } = useSwr(`${process.env.SERVER}/api/stores?missing=${router.query.name}`, fetcher)
+  const { data, error } = useSwr(`${process.env.SERVER}/api/stores?missing=${query.missing}`, fetcher)
 
   if (error) return <div>Failed to load stores</div>
   if (!data) return <div>Loading...</div>
@@ -41,12 +42,12 @@ export default function Store() {
           <section className="column is-4">
             <h2 >Stores</h2>
             {data
-              ? data.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={router.query.name} />)
+              ? data.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={query.missing} />)
               : ""
             }
 
             {data  ? 
-              data.length === 0 ? `No stores that sell ${router.query.name} please come back later` : ""
+              data.length === 0 ? `No stores that sell ${query.missing} please come back later` : ""
               : ""
             }
 
@@ -57,4 +58,9 @@ export default function Store() {
         </div>
     </Layout>
   )
+}
+
+
+Index.getInitialProps = async ({query}) => {
+  return {query};
 }

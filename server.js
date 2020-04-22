@@ -14,8 +14,10 @@ app
   .then(() => {
     const server = express();
 
-    server.get('/', (req, res) => {
-      app.render(req, res, '/bread');
+    server.get('/:missing', (req, res) => {
+      const { missing } = req.params;
+
+      app.render(req, res, '/', { ...req.query, missing });
     });
 
     server.get('*', (req, res) => handle(req, res));

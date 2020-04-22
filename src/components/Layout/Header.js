@@ -5,9 +5,9 @@ import styles from "./Header.scss";
 export default ({ user = {} }) => (
     <header className={styles.header}>
       <nav>
-        <a href="/">
+        <Link href="/">
           <a>All Stores</a>
-        </a>
+        </Link>
         <Link href="/addstore">
           <a>Add your finding</a>
         </Link>
