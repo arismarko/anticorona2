@@ -10,5 +10,14 @@ module.exports = withSass({
   cssLoaderOptions: {
     importLoaders: 1,
     localIdentName: "[local]___[hash:base64:5]",
-  }
+  },
+  exportPathMap: async function(
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      "/": { page: "/", query: { missing: 'hello-nextjs' }  },
+      "/api": { page: "/api/stores", query: { missing: 'hello-nextjs' }  },
+      }
+    }
 });
