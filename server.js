@@ -14,9 +14,8 @@ app
   .then(() => {
     const server = express();
 
-    server.get('/stores/:id', (req, res) => {
-      const { id } = req.params;
-      app.render(req, res, '/stores', { ...req.query, id });
+    server.get('/', (req, res) => {
+      app.render(req, res, '/bread');
     });
 
     server.get('*', (req, res) => handle(req, res));

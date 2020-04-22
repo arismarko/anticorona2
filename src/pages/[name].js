@@ -1,3 +1,5 @@
+
+import { useRouter } from 'next/router'
 import Layout from '../components/Layout';
 import React, { useState, useEffect } from 'react';
 import Stores from '../components/Stores/Stores';
@@ -7,25 +9,29 @@ import fetch from 'isomorphic-unfetch';
 import Spinner from '../components/Spinner/Spinner';
 import dynamic from 'next/dynamic';
 
-
 import css from './styles/pages.scss';
 
+import useSwr from 'swr'
+
+const fetcher = url => fetch(url).then(res => res.json());
+
 const MapWithNoSSR = dynamic(() => import('../components/Map/Map'), {
-  ssr: false
+    ssr: false
 });
 
-const Index = function ({stores, missing})  {
+export default function Store() {
+  const router = useRouter()
 
-  // console.log(data);
+  const { data, error } = useSwr(`${process.env.SERVER}/api/stores?missing=${router.query.name}`, fetcher)
 
-  const loading = true;
+  if (error) return <div>Failed to load stores</div>
+  if (!data) return <div>Loading...</div>
 
-  const datapoints = stores.map(s=> {
+  const datapoints = data.map(s=> {
     return {'latitude': parseFloat(s.coordinates.split(',')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
   });
 
   return (
-    
     <Layout>
         <h1 className={css.title}> Find my item</h1>
         <header className={css.header}>
@@ -34,13 +40,13 @@ const Index = function ({stores, missing})  {
         <div className={`columns mapview ${css.pages}`}>
           <section className="column is-4">
             <h2 >Stores</h2>
-            {loading === true
-              ? stores.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={missing} />)
+            {data
+              ? data.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={router.query.name} />)
               : ""
             }
 
-            {loading !== true ? 
-              stores.length === 0 ? `No stores that sell ${missing} please come back later` : ""
+            {data  ? 
+              data.length === 0 ? `No stores that sell ${router.query.name} please come back later` : ""
               : ""
             }
 
@@ -52,17 +58,3 @@ const Index = function ({stores, missing})  {
     </Layout>
   )
 }
-
-Index.getInitialProps = async ({ req } ) => {
-  let data = [];
-
-  let missing = Object.keys(req.query).length === 0 ? 'bread'  : req.query.missing;
-
-  const tes = await fetch(`${process.env.SERVER}/api/stores?missing=${missing}`);
-
-  data   = await tes.json();
-
-  return {stores: data, missing: missing};
-}
-
-export default Index;
