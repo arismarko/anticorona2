@@ -16,8 +16,7 @@ module.exports = withSass({
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
-      "/": { page: "/", query: { missing: 'hello-nextjs' }  },
-      "/api": { page: "/api/stores", query: { missing: 'hello-nextjs' }  },
+      "/": { page: "/", query: { missing: 'hello-nextjs' }  }
       }
     }
 });
