@@ -13,19 +13,15 @@ app
   .prepare()
   .then(() => {
     const server = express();
-    server.use(require('./routes'));
 
     server.get('/stores/:id', (req, res) => {
       const { id } = req.params;
       app.render(req, res, '/stores', { ...req.query, id });
     });
 
-    server.get('/:missing', (req, res) => {
-      const { missing } = req.params;
-      app.render(req, res, '/', { ...req.query, missing });
-    });
-
     server.get('*', (req, res) => handle(req, res));
+
+    server.post('*', (req, res) => {return handle(req, res)})
 
     server.listen(3000, err => {
       if (err) throw err;

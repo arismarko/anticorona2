@@ -4,6 +4,9 @@ const withSass = require('@zeit/next-sass');
 
 module.exports = withSass({
   cssModules: true,
+  env: {
+    SERVER: 'http://localhost:3000',
+  },
   cssLoaderOptions: {
     importLoaders: 1,
     localIdentName: "[local]___[hash:base64:5]",
