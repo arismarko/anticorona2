@@ -17,7 +17,7 @@ module.exports = withSass({
   ) {
     return {
       "/": { page: "/", query: { missing: 'bread' }  },
-      "/api": { page: "/api/stores" },
+      "/api": { page: "/api/stores", query: { missing: 'bread' } },
       }
     }
 });
