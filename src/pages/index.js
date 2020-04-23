@@ -72,8 +72,8 @@ export default function Index({query}){
 
 Index.getInitialProps = async ({query}) => {
   if (!query.hasOwnProperty('missing')) {
-    query.missing = '';
+    query.missing = 'bread';
   }
-  
+
   return {query};
 }
