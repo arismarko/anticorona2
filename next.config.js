@@ -5,7 +5,7 @@ const withSass = require('@zeit/next-sass');
 module.exports = withSass({
   cssModules: true,
   env: {
-    SERVER: 'http://localhost:3000',
+    SERVER: 'https://anticorona2-9vlgwibmc.now.sh/',
   },
   cssLoaderOptions: {
     importLoaders: 1,
