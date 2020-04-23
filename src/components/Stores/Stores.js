@@ -9,7 +9,7 @@ export default ({storename, location, coordinates, missings, id, rating=false, .
    
     <p>Find below stores that sell  {props.missing} </p>
 
-    <section className={css.store}>
+    <article className={css.store}>
       <h2>
         <Link as={`/stores/${id}?rating=4`}
               href={`/stores?id=${id}&rating=4`}
@@ -24,6 +24,6 @@ export default ({storename, location, coordinates, missings, id, rating=false, .
       </p>
 
       Number of items: {Math.round(Math.random()*200)}
-    </section>
+    </article>
   </div>
 );

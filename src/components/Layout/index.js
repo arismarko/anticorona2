@@ -27,9 +27,7 @@ export default ({ children, title='Anticorona' }) => (
           </Head>
           <Header />
             <main>
-              <div id="container">
-                {children}
-              </div>
+              {children}
             </main>
           <Footer />
         </div>

@@ -32,29 +32,38 @@ export default function Index({query}){
     return {'latitude': parseFloat(s.coordinates.split(',')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
   });
 
+  console.log(query);
+
   return (
     <Layout>
-        <h1 className={css.title}> Find my item</h1>
-        <header className={css.header}>
-          <Items />
-        </header>
-        <div className={`columns mapview ${css.pages}`}>
-          <section className="column is-4">
-            <h2 >Stores</h2>
-            {data
-              ? data.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={query.missing} />)
-              : ""
-            }
-
-            {data  ? 
-              data.length === 0 ? `No stores that sell ${query.missing} please come back later` : ""
-              : ""
-            }
-
+        <div className="container">
+          <section>
+            <h1 className={css.title}> Looking for an item, you are in the right place</h1>
           </section>
-          <aside className="column">
-            <MapWithNoSSR points={datapoints}/>
-          </aside>
+          
+        </div>
+        <header>
+            <Items />
+        </header>
+        <div className="container">
+          <div className={`columns mapview ${css.pages}`}>
+            <section className="column is-4 is-paddingless">
+              <h2 >Stores</h2>
+              {data
+                ? data.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={query.missing} />)
+                : ""
+              }
+
+              {data  ? 
+                data.length === 0 ? `No stores that sell ${query.missing} please come back later` : ""
+                : ""
+              }
+
+            </section>
+            <aside className="column">
+              <MapWithNoSSR points={datapoints}/>
+            </aside>
+          </div>
         </div>
     </Layout>
   )
