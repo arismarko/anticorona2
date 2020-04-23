@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Router from 'next/router'
 import css from './AddStore.scss';
 
 import { Modal } from 'react-bulma-components';
@@ -53,7 +53,7 @@ const AddStore = () => {
                                 axios.post(`${process.env.SERVER}/api/stores`, values).then(
                                     (response) => { 
                                         console.log(response) 
-                                    
+                                        Router.push('/')
                                     },
                                     (error) => {
                                         console.log(error);

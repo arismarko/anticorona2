@@ -35,20 +35,23 @@ const AddItem = ({close}) => {
             <form onSubmit={handleSubmit}>
             <h2>Add an Item</h2>
             <div className="field">
-                    <label className="label">Items</label>
-                    <div className="control">
-                        <input
-                            className="input" 
-                            type="text"
-                            name="item"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.email}
-                            placeholder="bread" 
-                        />
-                        {errors.email && touched.email && errors.email}
+                        <label class="label">Subject</label>
+                        <div class="control">
+                            <div class="select">
+                            <select 
+                                name="item" 
+                                value={values.item}  
+                                onChange={handleChange}
+                            >
+                                <option>Select dropdown</option>
+                                <option value="bread">Bread</option>
+                                <option value="toiletroll">Toilet Roll</option>
+                                <option value="pasta">Pasta</option>
+                            </select>
+                            </div>
+                        </div>
+                        {errors.item && touched.item && errors.item}
 
-                    </div>
                 </div>
 
                 <div className="field">
@@ -60,10 +63,10 @@ const AddItem = ({close}) => {
                             name="number"
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            value={values.email}
+                            value={values.number}
                             placeholder="20" 
                         />
-                        {errors.email && touched.email && errors.email}
+                        {errors.number && touched.number && errors.number}
 
                     </div>
                 </div>
