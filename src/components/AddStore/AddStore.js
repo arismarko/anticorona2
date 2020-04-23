@@ -51,7 +51,10 @@ const AddStore = () => {
                                 console.log(values);
                                 
                                 axios.post(`${process.env.SERVER}/api/stores`, values).then(
-                                    (response) => { console.log(response)},
+                                    (response) => { 
+                                        console.log(response) 
+                                    
+                                    },
                                     (error) => {
                                         console.log(error);
                                     }
