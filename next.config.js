@@ -4,6 +4,9 @@ const withSass = require('@zeit/next-sass');
 
 module.exports = withSass({
   cssModules: true,
+  env: {
+    SERVER: 'http://localhost:3000',
+  },
   cssLoaderOptions: {
     importLoaders: 1,
     localIdentName: "[local]___[hash:base64:5]",
@@ -13,11 +16,8 @@ module.exports = withSass({
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
-      "/": { page: "/", query: { missing: 'toiletroll' } },
-      "/api/addstores": {page: "/api/addstores"},
-      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'toiletroll' }},
-      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'bread' }},
-      "/p/hello-nextjs": {page: "/api/stores", query: { missings: 'pasta' }}
+      "/": { page: "/", query: { missing: 'bread' }  },
+      "/api": { page: "/api/stores" },
       }
     }
 });

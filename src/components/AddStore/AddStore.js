@@ -14,11 +14,6 @@ import { addItemToStore } from '../../providers/stores/stores.utils';
 
 import AddItem from '../AddItem/AddItem';
 
-function showPosition(position) {
-    
-}
-
-
 const AddStore = () => {
     const { storeItems, addItem } = useContext(StoreContext);
     const [ open, setOpen] = useState(false);
@@ -55,7 +50,7 @@ const AddStore = () => {
 
                                 console.log(values);
                                 
-                                axios.post(`${process.env.SERVER}/api/addstores`, values).then(
+                                axios.post(`${process.env.SERVER}/api/stores`, values).then(
                                     (response) => { console.log(response)},
                                     (error) => {
                                         console.log(error);
