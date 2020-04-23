@@ -5,7 +5,7 @@ const withSass = require('@zeit/next-sass');
 module.exports = withSass({
   cssModules: true,
   env: {
-    SERVER: 'https://ariskorona.herokuapp.com/',
+    SERVER: 'https://ariskorona.herokuapp.com',
   },
   cssLoaderOptions: {
     importLoaders: 1,
