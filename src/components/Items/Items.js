@@ -6,13 +6,13 @@ const Items = () => {
             <nav>
                 <ul>
                     <li>
-                        <a href="/?missing=bread">Bread</a>
+                        <a href="/bread">Masks</a>
                     </li>
                     <li>
-                        <a href="/?missing=bread">Toilet roll</a>
+                        <a href="/toiletroll">Toilet roll</a>
                     </li>
                     <li>
-                        <a href="/?missing=pasta">Pasta</a>
+                        <a href="/pasta">Pasta</a>
                     </li>
                 </ul>
             </nav>

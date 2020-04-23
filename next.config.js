@@ -5,7 +5,7 @@ const withSass = require('@zeit/next-sass');
 module.exports = withSass({
   cssModules: true,
   env: {
-    SERVER: 'https://anticorona2-9vlgwibmc.now.sh/',
+    SERVER: 'https://ariskorona.herokuapp.com/',
   },
   cssLoaderOptions: {
     importLoaders: 1,
@@ -17,7 +17,7 @@ module.exports = withSass({
   ) {
     return {
       "/": { page: "/", query: { missing: 'bread' }  },
-      "/api": { page: "/api/stores", query: { missing: 'bread' } },
+      "/api": { page: "/api/stores" },
       }
     }
 });

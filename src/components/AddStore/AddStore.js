@@ -130,7 +130,7 @@ const AddStore = () => {
 
                                 <div className={`${css.formborder} ${!open? css.hide : ''}`}>
                                     <a className={css.closeBtn} onClick={() => setOpen(!open)}>X</a>
-                                    <AddItem />
+                                    <AddItem close={() => setOpen(!open)} />
                                 </div> 
                             </div>
                          
