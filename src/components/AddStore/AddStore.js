@@ -51,7 +51,10 @@ const AddStore = () => {
                                 console.log(values);
                                 
                                 axios.post(`${process.env.SERVER}/api/stores`, values).then(
-                                    (response) => { console.log(response)},
+                                    (response) => { 
+                                        console.log(response) 
+                                    
+                                    },
                                     (error) => {
                                         console.log(error);
                                     }
@@ -130,7 +133,7 @@ const AddStore = () => {
 
                                 <div className={`${css.formborder} ${!open? css.hide : ''}`}>
                                     <a className={css.closeBtn} onClick={() => setOpen(!open)}>X</a>
-                                    <AddItem />
+                                    <AddItem close={() => setOpen(!open)} />
                                 </div> 
                             </div>
                          

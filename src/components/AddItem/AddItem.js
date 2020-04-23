@@ -18,6 +18,7 @@ const AddItem = ({close}) => {
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
                             addItem(values);
+                            close();
                         }, 400);
                     }}
             >
