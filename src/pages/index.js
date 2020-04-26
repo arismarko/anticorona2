@@ -23,7 +23,12 @@ export default function Index({query}){
 
   const router = useRouter()
 
-  const { data, error } = useSwr(`${process.env.SERVER}/api/stores?missing=${query.missing}`, fetcher)
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+  console.log(date);
+
+  const { data, error } = useSwr(`${process.env.SERVER}/api/stores?missing=${query.missing}&date=${date}`, fetcher)
 
   if (error) return <div>Failed to load stores</div>
   if (!data) return <div>Loading...</div>

@@ -10,6 +10,7 @@ const prisma = new PrismaClient();
 export default async (req, res) => {
     const {
         query: {missing },
+        query: {date},
         method,
     } = req
 
@@ -18,12 +19,14 @@ export default async (req, res) => {
             // Get data from your database
                await prisma.store.findMany({ where: 
                     { 
+                        date: new Date(date),
                         Item: {
                             some: 
                                 {item: missing} 
                         } 
                     }
                 }).then(results => {
+                    console.log(results);
                     res.status(200).json(results)
                 })
 
@@ -31,11 +34,15 @@ export default async (req, res) => {
         case 'POST':
             // Update or create data in your database
             const { body } = req;
+
+            var today = new Date();
+            var todayonlydate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
             const store =  await prisma.store.create({ data: {
                 storename: body.storename,
                 location: body.location,
                 coordinates: body.coordinates,
-                date: new Date(),
+                date: new Date(todayonlydate),
                 Item: {
                 create: body.items,
                 },
