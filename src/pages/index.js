@@ -44,7 +44,7 @@ export default function Index({query}){
         <div className="container">
           <div className={`columns mapview ${css.pages}`}>
             <section className="column is-4 is-paddingless">
-              <h2>Stores that have {query.missing} today</h2>
+              <h2>Stores near you, that have {query.missing} today</h2>
               {data
                 ? data.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={query.missing} />)
                 : ""

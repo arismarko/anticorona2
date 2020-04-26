@@ -40,7 +40,7 @@ const SearchBox = () => {
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.email}
-                            placeholder="Type and item and press enter" 
+                            placeholder="Type an item missing and press enter" 
                         />
                         {errors.email && touched.email && errors.email}
 

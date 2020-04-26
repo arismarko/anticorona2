@@ -35,7 +35,7 @@ const AddStore = () => {
         <div className="container">
             <section>
                 <div className='columns'>
-                    <div className="column is-4">
+                    <div className="column is-8">
                         <Formik
                             initialValues={{ storename: '', location: '', coordinates: '' }}
                             validate={values => {
