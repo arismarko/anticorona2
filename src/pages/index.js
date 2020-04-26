@@ -86,7 +86,7 @@ export default function Index({query}){
                   <br/>
                   <ul>
                     <li>- Try to search for an item, for example toilet roll, or sanitizer</li>
-                    <li>- <Link href="missing">Add it</Link> and we will alert you</li>
+                    <li>- <Link href="missing">Let us know what you are missing</Link> and we will alert you</li>
                   </ul>
                   </p>: ""
                 : ""
