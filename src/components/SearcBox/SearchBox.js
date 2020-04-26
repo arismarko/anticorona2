@@ -1,7 +1,7 @@
 import { Field, Formik, Form } from 'formik';
 import { useRouter } from 'next/router';
 
-import css from './SearchBox.scss';
+import css from './Searchbox.scss';
 
 const SearchBox = () => {
     const router = useRouter();

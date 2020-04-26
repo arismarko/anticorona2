@@ -39,7 +39,7 @@ export default () => (
               </div>
             </div>
             <div class="column is-8">
-              <img src="static/shelfs.jpg" alt="help us find out missing items" />
+              <img className={css.sideimage} src="static/shelfs.jpg" alt="help us find out missing items" />
             </div>
           </div>
           </section>
