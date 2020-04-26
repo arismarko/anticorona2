@@ -44,8 +44,12 @@ const AddItem = ({close}) => {
                                 onChange={handleChange}
                             >
                                 <option>Select dropdown</option>
-                                <option value="bread">Bread</option>
+                                <option value="disinfectants">Disinfectants</option>
+                                <option value="plasticgloves">Plastic gloves</option>
+                                <option value="sanitizer">Sanitizer</option>
+                                <option value="mask">Masks</option>
                                 <option value="toiletroll">Toilet Roll</option>
+                                <option value="detol">Detol</option>
                                 <option value="pasta">Pasta</option>
                             </select>
                             </div>
