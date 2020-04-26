@@ -70,7 +70,7 @@ export default function Index({query}){
         <div className="container">
           <div className={`columns mapview ${css.pages}`}>
             <section className="column is-4 is-paddingless">
-              <h2>Stores near you, that have {query.missing} today</h2>
+              {query.missing && <h2>Stores near you, that have {query.missing} today</h2>}
               {data.results && location
                 ? data.results.sort(function(a, b){
                   return a.distance-b.distance
