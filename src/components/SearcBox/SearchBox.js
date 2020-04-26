@@ -16,7 +16,7 @@ const SearchBox = () => {
                     }}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
-                            router.push(`/?missing=${values.search.trim().toLowerCase()}`)
+                            router.push(`/?missing=${values.search.toLowerCase()}`)
                         }, 400);
                     }}
             >
