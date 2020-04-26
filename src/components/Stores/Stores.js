@@ -6,8 +6,6 @@ import css from './Stores.scss';
 
 export default ({storename, location, coordinates, missings, id, rating=false, ...props}) => (
   <div className={css.stores}>
-   
-    <p>Find below stores that sells  {props.missing} </p>
 
     <article className={css.store}>
       <h2>

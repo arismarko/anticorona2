@@ -46,7 +46,7 @@ export default function Store() {
             }
 
             {data  ? 
-              data.length === 0 ? `No stores that sell ${router.query.name} please come back later` : ""
+              data.length === 0 ? `<a href="missing">We couldnt find your item, please add it so we can alert you </a>` : ""
               : ""
             }
 

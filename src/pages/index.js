@@ -31,16 +31,12 @@ export default function Index({query}){
   const datapoints = data.map(s=> {
     return {'latitude': parseFloat(s.coordinates.split(',')[0]),  'longitude': parseFloat(s.coordinates.split(',')[1])}
   });
-
-  console.log(query);
-
   return (
     <Layout>
         <div className="container">
-          <section>
-            <h1 className={css.title}> Looking for an item, you are in the right place</h1>
+          <section className={css.message}>
+            <h1 className={css.title}> Help us reduce the distance by alerting for needed items</h1>
           </section>
-          
         </div>
         <header>
             <Items />
@@ -48,14 +44,23 @@ export default function Index({query}){
         <div className="container">
           <div className={`columns mapview ${css.pages}`}>
             <section className="column is-4 is-paddingless">
-              <h2 >Stores</h2>
+              <h2>Stores near you, that have {query.missing} today</h2>
               {data
                 ? data.map(s=> <Stores key={s.id} {...s} {...s.Item} missing={query.missing} />)
                 : ""
               }
 
               {data  ? 
-                data.length === 0 ? `No stores that sell ${query.missing} please come back later` : ""
+                data.length === 0 ? 
+                  <p>
+                  <br/>
+                  Apologies but we couldnt find your item:
+                  <br/>
+                  <ul>
+                    <li>- Try to search for a different item</li>
+                    <li>- <Link href="missing">Add it</Link> and we will alert you</li>
+                  </ul>
+                  </p>: ""
                 : ""
               }
 
@@ -71,9 +76,5 @@ export default function Index({query}){
 
 
 Index.getInitialProps = async ({query}) => {
-  if (!query.hasOwnProperty('missing')) {
-    query.missing = 'bread';
-  }
-
   return {query};
 }

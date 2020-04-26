@@ -35,7 +35,7 @@ const AddStore = () => {
         <div className="container">
             <section>
                 <div className='columns'>
-                    <div className="column is-4">
+                    <div className="column is-8">
                         <Formik
                             initialValues={{ storename: '', location: '', coordinates: '' }}
                             validate={values => {
@@ -47,8 +47,6 @@ const AddStore = () => {
 
                                 values.items = storeItems;
                                 values.coordinates = location;
-
-                                console.log(values);
                                 
                                 axios.post(`${process.env.SERVER}/api/stores`, values).then(
                                     (response) => { 
@@ -76,7 +74,7 @@ const AddStore = () => {
                             }) => (
                             <form onSubmit={handleSubmit}>
                             <div className="field">
-                                <label className="label">Storename</label>
+                                <label className="label">Store name</label>
                                 <div className="control">
                                     <input
                                         className="input" 
@@ -116,7 +114,7 @@ const AddStore = () => {
                                 <div className={`${open? css.hide : ''}`}>
                                     <a 
                                         onClick={() => setOpen(!open)}
-                                        aria-haspopup="true">Add Item
+                                        aria-haspopup="true">Add Item and Quantity
                                     </a>
                                     <br />
                                     

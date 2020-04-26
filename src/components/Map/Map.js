@@ -1,12 +1,9 @@
-import * as React from 'react';
-import {useState} from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import {render} from 'react-dom';
-import MapGL from 'react-map-gl';
+import MapGL, {GeolocateControl } from 'react-map-gl';
 import Pins from './Pins';
 
 import css from './Map.scss';
-
-const MAPBOX_TOKEN = "pk.eyJ1IjoiYXJpc21hcmtvIiwiYSI6ImNrOGNidW13eTAwdXgzbm1sYXRicnI4NHQifQ.IMOWmDcDojDN2bUVdSO5AA"; // Set your mapbox token here
 
 function  Map({points}) {
   const [viewport, setViewport] = useState({
@@ -17,6 +14,37 @@ function  Map({points}) {
     pitch: 0
   });
 
+  const geolocateStyle = {
+    float: 'left',
+    margin: '50px',
+    padding: '10px',
+    color: 'green'
+  };
+
+
+  const [ location, setLocation] = useState(false);
+
+  useEffect(() => {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition((position) => {
+              setLocation(`${position.coords.latitude},${position.coords.longitude}`)
+
+              setViewport({
+                latitude:position.coords.latitude,
+                longitude: position.coords.longitude,
+                zoom: 12,
+                bearing: 0,
+                pitch: 0
+              })
+          });
+
+         
+      } else { 
+          setLocation(none, none)
+      }
+      
+  },[]);
+
   return (
     <MapGL
       {...viewport}
@@ -24,9 +52,14 @@ function  Map({points}) {
       height="100vh"
       mapStyle="mapbox://styles/mapbox/dark-v9"
       onViewportChange={nextViewport => setViewport(nextViewport)}
-      mapboxApiAccessToken={MAPBOX_TOKEN}
+      mapboxApiAccessToken={process.env.MAPBOX_TOKEN}
     >
-       <Pins data={points} />
+      <GeolocateControl
+        style={geolocateStyle}
+        positionOptions={{enableHighAccuracy: true}}
+        trackUserLocation={true}
+      />
+      <Pins data={points} />
     </MapGL>
   );
 }
