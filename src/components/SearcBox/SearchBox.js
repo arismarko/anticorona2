@@ -44,14 +44,21 @@ const SearchBox = () => {
                             value={values.search}
                             placeholder="Type an item missing and press enter" 
                         />
+
                         {errors.search && touched.search && errors.search}
 
                     </div>
+              
+
                 </div>
             </form>
             )}
             </Formik>
+           
             </div>
+            <section>
+                <h1 className={css.title}> Find essentials, Alert others, and save distance looking</h1>
+            </section>
         </div>
     )
 }

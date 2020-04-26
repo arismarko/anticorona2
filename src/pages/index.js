@@ -64,11 +64,6 @@ export default function Index({query}){
   
   return (
     <Layout>
-        <div className="container">
-          <section className={css.message}>
-            <h1 className={css.title}> Help us reduce the distance by alerting for needed items</h1>
-          </section>
-        </div>
         <header>
             <Items />
         </header>
