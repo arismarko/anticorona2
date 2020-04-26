@@ -57,7 +57,7 @@ const SearchBox = () => {
            
             </div>
             <section>
-                <h1 className={css.title}> Find essentials, Alert others, and save time travelling</h1>
+                <h1 className={css.title}> Find essentials, Alert others, and Save time travelling</h1>
             </section>
         </div>
     )
