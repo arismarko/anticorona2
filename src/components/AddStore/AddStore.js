@@ -47,8 +47,6 @@ const AddStore = () => {
 
                                 values.items = storeItems;
                                 values.coordinates = location;
-
-                                console.log(values);
                                 
                                 axios.post(`${process.env.SERVER}/api/stores`, values).then(
                                     (response) => { 
@@ -116,7 +114,7 @@ const AddStore = () => {
                                 <div className={`${open? css.hide : ''}`}>
                                     <a 
                                         onClick={() => setOpen(!open)}
-                                        aria-haspopup="true">Add Item
+                                        aria-haspopup="true">Add Item and Quantity
                                     </a>
                                     <br />
                                     

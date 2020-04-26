@@ -51,7 +51,16 @@ export default function Index({query}){
               }
 
               {data  ? 
-                data.length === 0 ? `We couldnt find your item please add it and we will alert you` : ""
+                data.length === 0 ? 
+                  <p>
+                  <br/>
+                  Apologies but we couldnt find your item:
+                  <br/>
+                  <ul>
+                    <li>- Try to search for a different item</li>
+                    <li>- <Link href="missing">Add it</Link> and we will alert you</li>
+                  </ul>
+                  </p>: ""
                 : ""
               }
 

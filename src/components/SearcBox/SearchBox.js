@@ -7,7 +7,7 @@ const SearchBox = () => {
     const router = useRouter();
     return (
         <div className={`columns ${css.searchbox}`}>
-            <div className="column is-4">
+            <div className="column is-4 is-paddingless">
                 <Formik
                 initialValues={{ search: ''}}
                     validate={values => {
