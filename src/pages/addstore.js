@@ -18,18 +18,31 @@ export default () => (
                 
                 Help everyone find what is necessary <br/><br/>
 
-                Currently the top 3 items are:
+                Currently the top items are:
                 <ul>
                   <li>
-                    - Bread
+                    - Disinfectants
+                  </li>
+                  <li>
+                    - Plastic gloves
+                  </li>
+                  <li>
+                     - Sanitizer
+                  </li>
+                  <li>
+                    - Masks
+                  </li>
+                  <li>
+                    - Toilet Roll
                   </li>
                   <li>
                     - Pasta
                   </li>
                   <li>
-                    - Toilet Roll
+                    - Dettol
                   </li>
                 </ul>
+
                 <br />
                 If you have seen them on a store near by let other people know, <br/>
                 this will reduce the time that need to travel <br/> and thus reduce to spread the virus

@@ -16,7 +16,9 @@ const SearchBox = () => {
                     }}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
-                            router.push(`/?missing=${values.search}`)
+                            const term = values.search.toLowerCase().replace(' ', '');
+
+                            router.push(`/?missing=${term}`)
                         }, 400);
                     }}
             >
@@ -39,12 +41,11 @@ const SearchBox = () => {
                             name="search"
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            value={values.email}
+                            value={values.search}
                             placeholder="Type an item missing and press enter" 
                         />
 
-                       
-                        {errors.email && touched.email && errors.email}
+                        {errors.search && touched.search && errors.search}
 
                     </div>
               
