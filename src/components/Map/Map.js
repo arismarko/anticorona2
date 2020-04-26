@@ -32,7 +32,7 @@ function  Map({points}) {
               setViewport({
                 latitude:position.coords.latitude,
                 longitude: position.coords.longitude,
-                zoom: 12,
+                zoom: 11,
                 bearing: 0,
                 pitch: 0
               })
