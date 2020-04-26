@@ -2,3 +2,8 @@
     min-height: 850px;
 }
 
+@media only screen and (max-width: 600px) {
+    .mainbody {
+        padding: 10px;
+    }
+}

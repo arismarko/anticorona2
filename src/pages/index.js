@@ -23,10 +23,8 @@ export default function Index({query}){
 
   const router = useRouter()
 
-  var today = new Date();
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-
-  console.log(date);
+  const today = new Date();
+  const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
   const { data, error } = useSwr(`${process.env.SERVER}/api/stores?missing=${query.missing}&date=${date}`, fetcher)
 
