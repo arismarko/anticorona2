@@ -11,14 +11,5 @@ module.exports = withSass({
   cssLoaderOptions: {
     importLoaders: 1,
     localIdentName: "[local]___[hash:base64:5]",
-  },
-  exportPathMap: async function(
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      "/": { page: "/", query: { missing: 'bread' }  },
-      "/api": { page: "/api/stores" },
-      }
-    }
+  }
 });

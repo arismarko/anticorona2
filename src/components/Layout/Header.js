@@ -4,16 +4,32 @@ import styles from "./Header.scss";
 
 export default ({ user = {} }) => (
     <header className={styles.header}>
-      <nav>
-        <Link href="/">
-          <a>All Stores</a>
-        </Link>
-        <Link href="/addstore">
-          <a>Add your finding</a>
-        </Link>
-
-        <p className={styles.message}>Lets beat Covid-19</p>
-      </nav>
+      <div className="container">
+ 
+        <nav>
+          <ul>
+            <li>
+              <a href="/"><img className={styles.imglogo} src="/static/logo.svg" alt="logo" /> Shopper</a>
+            </li>
+            <li>
+              <a href="/?missing=bread">
+                All Stores
+              </a>
+            </li>
+            <li>
+              <Link href="/addstore">
+                <a>Alert others for an Item</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/missing">
+                <a>Need an Item?</a>
+              </Link>
+            </li>
+          </ul>
+          <p className={styles.message}>Lets beat Covid-19</p>
+        </nav>
+      </div>
     </header>
   );
   

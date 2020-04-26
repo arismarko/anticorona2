@@ -26,10 +26,8 @@ export default ({ children, title='Anticorona' }) => (
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
           </Head>
           <Header />
-            <main>
-              <div id="container">
-                {children}
-              </div>
+            <main className={css.mainbody}>
+              {children}
             </main>
           <Footer />
         </div>

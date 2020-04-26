@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import Router from 'next/router'
-import css from './AddStore.scss';
+import css from './AddMissing.scss';
 
 import { Modal } from 'react-bulma-components';
 
@@ -47,8 +47,6 @@ const AddStore = () => {
 
                                 values.items = storeItems;
                                 values.coordinates = location;
-
-                                console.log(values);
                                 
                                 axios.post(`${process.env.SERVER}/api/stores`, values).then(
                                     (response) => { 
@@ -76,7 +74,7 @@ const AddStore = () => {
                             }) => (
                             <form onSubmit={handleSubmit}>
                             <div className="field">
-                                <label className="label">Store name</label>
+                                <label className="label">I need the following Items <br /> (Comma seperated values-CSV)</label>
                                 <div className="control">
                                     <input
                                         className="input" 
@@ -84,59 +82,30 @@ const AddStore = () => {
                                         name="storename"
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        value={values.email}
-                                        placeholder="Tesco or Sainsbury's" 
+                                        value={values.items}
+                                        placeholder="Bread, Mask" 
                                     />
                                     {errors.email && touched.email && errors.email}
 
                                 </div>
                             </div>
                             <div className="field">
-                                <label className="label">Location</label>
+                                <label className="label">Area</label>
                                 <div className="control">
                                     <input
                                         className="input" 
                                         type="text"
-                                        name="location"
+                                        name="storename"
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        value={values.location}
-                                        placeholder="Camden" 
+                                        value={values.items}
+                                        placeholder="Camden or Los Angeles " 
                                     />
                                     {errors.email && touched.email && errors.email}
 
                                 </div>
                             </div>
 
-                           
-                            
-                            <div className="field">
-                                <h2>Missing Items</h2>  
-
-                                <div className={`${open? css.hide : ''}`}>
-                                    <a 
-                                        onClick={() => setOpen(!open)}
-                                        aria-haspopup="true">Add Item
-                                    </a>
-                                    <br />
-                                    
-                                    {
-                                        storeItems.length === 0 ?
-                                        "No Items added" :
-                                        storeItems.map(({item, number}) => 
-                                            <ul>
-                                                <li>{item} x {number}</li>
-                                            </ul>
-                                        )
-                                    }
-                                </div>
-
-                                <div className={`${css.formborder} ${!open? css.hide : ''}`}>
-                                    <a className={css.closeBtn} onClick={() => setOpen(!open)}>X</a>
-                                    <AddItem close={() => setOpen(!open)} />
-                                </div> 
-                            </div>
-                         
 
                             <div className={`field is-grouped ${css.addmissings}`}>
                                 <div className="control">
