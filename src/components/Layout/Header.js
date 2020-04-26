@@ -13,12 +13,12 @@ export default ({ user = {} }) => (
             </li>
             <li>
               <a href="/?missing=bread">
-                All Stores
+                Find
               </a>
             </li>
             <li>
               <Link href="/addstore">
-                <a>Alert others for an Item</a>
+                <a>Alert</a>
               </Link>
             </li>
             <li>
