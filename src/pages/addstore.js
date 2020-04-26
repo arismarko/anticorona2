@@ -18,7 +18,7 @@ export default () => (
                 
                 Help everyone find what is necessary <br/><br/>
 
-                Currently the top 3 items are:
+                Currently the top items are:
                 <ul>
                   <li>
                     - Disinfectants
@@ -39,7 +39,7 @@ export default () => (
                     - Pasta
                   </li>
                   <li>
-                    - Detol
+                    - Dettol
                   </li>
                 </ul>
 
