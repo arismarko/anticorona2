@@ -12,7 +12,7 @@ export default ({ user = {} }) => (
               <a href="/"><img className={styles.imglogo} src="/static/logo.svg" alt="logo" /> Shopper</a>
             </li>
             <li>
-              <a href="/?missing=bread">
+              <a href="/">
                 Find
               </a>
             </li>
