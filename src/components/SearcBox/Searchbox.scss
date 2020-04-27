@@ -9,3 +9,9 @@
     padding-left: 20px;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 600px) {
+    .title {
+        display: none;
+    }
+}

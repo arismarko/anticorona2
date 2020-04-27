@@ -57,13 +57,19 @@
 
 @media only screen and (max-width: 600px) {
   .header {
-    ul, li {
-       width: 100%;
-      float: left;
-    }
+    // ul, li {
+    //    width: 100%;
+    //   float: left;
+    // }
 
-    li {
-      padding-top: 10px
+    // li {
+    //   padding-top: 10px
+    // }
+
+    nav {
+      ul {
+        padding: 0px;
+      }
     }
 
 
