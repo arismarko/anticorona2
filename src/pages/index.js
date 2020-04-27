@@ -82,7 +82,7 @@ export default function Index({query}){
                 data.results.length === 0 ? 
                   <p>
                   <br/>
-                  Missing an Item, you can now:
+                  Missing an Item, you can now find it:
                   <br/>
                   <ul>
                     <li>- Try to search for an item, for example toilet roll, or sanitizer</li>
