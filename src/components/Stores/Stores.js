@@ -4,30 +4,29 @@ import Item from '../Item/Item';
 
 import css from './Stores.scss';
 
-export default ({total, storename, distance, location, coordinates, missings, id, rating=false, ...props} ) => {
-
-  const { number } = total;
+export default ({Item, storename, distance, location, coordinates, missings, id, rating=false, ...props} ) => {
+  let foundItem =[]
+  
+  foundItem = Item.filter(item => {
+    return item.item === missings 
+  })
 
   return (
-  <div className={css.stores}>
+    <div className={css.stores}>
 
-    <article className={css.store}>
-      <h2 class={css.header2}>
-        <Link as={`/stores/${id}?rating=4`}
-              href={`/stores?id=${id}&rating=4`}
-        >
-          <a>{storename} ({location})</a> 
-          
-        </Link>
-      </h2>
-      {/* <p>
-        Longitude: {coordinates.split(',')[1]} &nbsp;
-        Langitude:  {coordinates.split(',')[0]}
-      </p> */}
+      <article className={css.store}>
+        <h2 className={css.header2}>
+          <Link as={`/stores/${id}?rating=4`}
+                href={`/stores?id=${id}&rating=4`}
+          >
+            <a>{storename} ({location})</a> 
+            
+          </Link>
+        </h2>
+    
+        Distance: {distance && distance.toFixed(2)} miles,  
 
-      Distance: {distance.toFixed(2)} miles,  
-
-      <strong> { number }</strong> available
-    </article>
-  </div>
+        <strong> { foundItem.length !==0  && foundItem[0].number }</strong> available
+      </article>
+    </div>
 )};

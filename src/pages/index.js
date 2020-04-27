@@ -74,7 +74,7 @@ export default function Index({query}){
               {data.results && location
                 ? data.results.sort(function(a, b){
                   return a.distance-b.distance
-                }).map(s=> <Stores key={s.id} {...s} {...s.Item} />)
+                }).map(s=> <Stores key={s.id} {...s} missings={query.missing} {...s.Item} />)
                 : ""
               }
 
