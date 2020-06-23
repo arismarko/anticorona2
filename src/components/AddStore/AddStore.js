@@ -47,7 +47,7 @@ const AddStore = () => {
 
                                 values.items = storeItems;
                                 values.coordinates = location;
-                                values.amount = '';
+                                values.amount = 0;
                                 
                                 axios.post(`${process.env.SERVER}/api/stores`, values).then(
                                     (response) => { 
