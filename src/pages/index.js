@@ -38,9 +38,7 @@ export default function Index({query}){
   const today = new Date();
   const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
-  const missing = (typeof query.missing !== 'undefined') ? query.missing : 'bread';
-
-  const { data, error } = useSwr(`${process.env.SERVER}/api/stores?missing=${missing}&date=${date}`, fetcher)
+  const { data, error } = useSwr(`${process.env.SERVER}/api/stores?missing=${query.missing}&date=${date}`, fetcher)
 
   if (error) return <div>Failed to load stores</div>
   if (!data) return <div>Loading...</div>
