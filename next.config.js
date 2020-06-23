@@ -6,7 +6,7 @@ module.exports = withSass({
   cssModules: true,
   env: {
     SERVER: 'https://ariskorona.herokuapp.com',
-    MAPBOX_TOKEN: 'pk.eyJ1IjoiYXJpc21hcmtvIiwiYSI6ImNrOGNidW13eTAwdXgzbm1sYXRicnI4NHQifQ.IMOWmDcDojDN2bUVdSO5AA'
+    MAPBOX_TOKEN: 'pk.eyJ1IjoiYXJpc21hcmtvIiwiYSI6ImNrYnJ0eWluNjI2MG0yd3I1a2N0c2V5bjYifQ.TDuvrgley6JmdxziGoXmlQ'
   },
   cssLoaderOptions: {
     importLoaders: 1,
